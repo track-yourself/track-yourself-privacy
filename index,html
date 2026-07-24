@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Track Yourself - Privacy Policy</title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;max-width:980px;margin:auto;padding:40px;line-height:1.7;background:#fafafa;color:#333}
+h1{text-align:center;color:#d63384}
+h2{color:#d63384;border-bottom:1px solid #ddd;padding-bottom:4px}
+.section{margin-bottom:36px}
+.note{background:#fff6fb;border-left:5px solid #d63384;padding:14px}
+footer{margin-top:50px;font-size:.9em;color:#666}
+</style>
+</head>
+<body>
+<h1>Track Yourself – Privacy Policy / Informativa sulla Privacy</h1>
+<p><strong>Last updated / Ultimo aggiornamento:</strong> 24 July 2026</p>
+<div class="note">
+<p>This page contains the English version followed by the Italian version.</p>
+<p>Questa pagina contiene prima la versione inglese e poi quella italiana.</p>
+</div>
+
+<h2>English</h2>
+
+<div class="section">
+<h3>1. Introduction</h3>
+<p>Track Yourself is a menstrual cycle, ovulation and fertility tracking application. This Privacy Policy explains how information is collected, used, stored and protected.</p>
+<h3>2. Data We May Process</h3>
+<ul>
+<li>Cycle, period, ovulation and fertility information.</li>
+<li>Symptoms, notes and health information voluntarily entered by the user.</li>
+<li>Messages sent to the integrated AI assistant.</li>
+<li>Technical information such as device type, operating system, app version, crash reports and advertising identifiers where applicable.</li>
+</ul>
+<h3>3. Purpose of Processing</h3>
+<ul>
+<li>Provide cycle tracking features.</li>
+<li>Generate predictions and statistics.</li>
+<li>Answer AI requests.</li>
+<li>Maintain security and improve the app.</li>
+<li>Display advertisements through Google AdMob.</li>
+</ul>
+<h3>4. AI Assistant</h3>
+<p>The assistant is intended only for menstrual health, fertility, ovulation and app-related topics. Messages may be securely transmitted to AI service providers to generate a response. Users should avoid sharing unnecessary sensitive personal information.</p>
+<h3>5. Advertising</h3>
+<p>The app uses Google AdMob. Google may collect advertising identifiers and similar information in accordance with Google's Privacy Policy.</p>
+<h3>6. Data Sharing</h3>
+<p>Personal information is not sold. Information may be shared only with service providers necessary to operate the application, such as AI providers and Google AdMob.</p>
+<h3>7. Data Retention</h3>
+<p>Information is retained only as long as necessary for the purposes described in this policy or as required by law.</p>
+<h3>8. Security</h3>
+<p>Reasonable technical and organizational measures are adopted to protect information; however, no electronic system can guarantee absolute security.</p>
+<h3>9. User Rights</h3>
+<p>Where applicable, users may request access, correction, deletion or restriction of their personal information under applicable privacy laws including the GDPR.</p>
+<h3>10. Children</h3>
+<p>The application is not intended for children below the minimum legal age applicable in the user's jurisdiction.</p>
+<h3>11. Changes</h3>
+<p>This policy may be updated from time to time. The latest version will always be published on this page.</p>
+<h3>12. Contact</h3>
+<p>Email: <strong>trackyourself.support@gmail.com</strong></p>
+</div>
+
+<hr>
+
+<h2>Italiano</h2>
+<div class="section">
+<h3>1. Introduzione</h3>
+<p>Track Yourself è un'applicazione per il monitoraggio del ciclo mestruale, dell'ovulazione e della fertilità. Questa informativa descrive come i dati possono essere raccolti, utilizzati, conservati e protetti.</p>
+<h3>2. Dati che possono essere trattati</h3>
+<ul>
+<li>Informazioni su ciclo, mestruazioni, ovulazione e fertilità.</li>
+<li>Sintomi, note e informazioni sulla salute inserite volontariamente.</li>
+<li>Messaggi inviati all'assistente AI.</li>
+<li>Dati tecnici come tipo di dispositivo, sistema operativo, versione dell'app, crash report e identificatori pubblicitari ove applicabili.</li>
+</ul>
+<h3>3. Finalità</h3>
+<ul>
+<li>Fornire le funzionalità di monitoraggio.</li>
+<li>Generare previsioni e statistiche.</li>
+<li>Rispondere alle richieste dell'assistente AI.</li>
+<li>Migliorare sicurezza e prestazioni.</li>
+<li>Mostrare annunci tramite Google AdMob.</li>
+</ul>
+<h3>4. Assistente AI</h3>
+<p>L'assistente è dedicato esclusivamente a ciclo mestruale, fertilità, ovulazione e utilizzo dell'app. I messaggi possono essere inviati in modo sicuro a fornitori di servizi AI per generare una risposta. Evitare di condividere dati sensibili non necessari.</p>
+<h3>5. Pubblicità</h3>
+<p>L'app utilizza Google AdMob, che può raccogliere identificatori pubblicitari secondo la propria informativa sulla privacy.</p>
+<h3>6. Condivisione dei dati</h3>
+<p>I dati personali non vengono venduti. Possono essere condivisi esclusivamente con fornitori di servizi indispensabili al funzionamento dell'app, come servizi AI e Google AdMob.</p>
+<h3>7. Conservazione</h3>
+<p>I dati sono conservati solo per il tempo necessario alle finalità indicate o previsto dalla legge.</p>
+<h3>8. Sicurezza</h3>
+<p>Adottiamo misure tecniche e organizzative ragionevoli per proteggere le informazioni.</p>
+<h3>9. Diritti dell'utente</h3>
+<p>L'utente può esercitare i diritti previsti dalla normativa applicabile, incluso il GDPR, come accesso, rettifica e cancellazione dei dati.</p>
+<h3>10. Minori</h3>
+<p>L'app non è destinata ai minori al di sotto dell'età minima prevista dalla legge applicabile.</p>
+<h3>11. Modifiche</h3>
+<p>La presente informativa può essere aggiornata. La versione più recente sarà sempre pubblicata su questa pagina.</p>
+<h3>12. Contatti</h3>
+<p>Email: <strong>trackyourself.support@gmail.com</strong></p>
+</div>
+<footer>© Track Yourself</footer>
+</body>
+</html>
