@@ -25,7 +25,6 @@
     font:400 17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   }
   .wrap{max-width:var(--max);margin:0 auto;padding:0 20px 72px}
-
   header{padding:56px 0 28px;border-bottom:1px solid var(--line);margin-bottom:36px}
   .mark{
     display:inline-block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;
@@ -36,7 +35,6 @@
     font-weight:650;letter-spacing:-.02em;
   }
   .updated{margin:0;color:var(--ink-soft);font-size:15px}
-
   .langs{display:flex;gap:8px;margin:26px 0 0}
   .langs button{
     font:inherit;font-size:14px;font-weight:600;cursor:pointer;
@@ -46,7 +44,6 @@
   }
   .langs button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
   .langs button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-
   h2{
     font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);
     font-weight:700;margin:52px 0 18px;padding-bottom:10px;border-bottom:1px solid var(--line);
@@ -58,8 +55,6 @@
   ul{margin:0 0 18px;padding-left:22px}
   li{margin-bottom:8px}
   strong{font-weight:650}
-
-  /* Il riquadro di sintesi: la parte che le persone leggono davvero */
   .summary{
     background:var(--paper);border:1px solid var(--line);
     border-left:4px solid var(--accent);
@@ -74,17 +69,13 @@
     content:"";position:absolute;left:2px;top:.58em;
     width:8px;height:8px;border-radius:50%;background:var(--accent);
   }
-
   .card{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:20px 22px 6px;margin:0 0 20px}
-
   table{width:100%;border-collapse:collapse;margin:6px 0 24px;font-size:15.5px;display:table}
   th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
   th{background:var(--accent-wash);font-weight:650;font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink)}
   tr:last-child td{border-bottom:0}
   .tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
-
   .note{background:var(--accent-wash);border-radius:4px;padding:18px 20px 4px;margin:0 0 22px}
-
   footer{margin-top:56px;padding-top:24px;border-top:1px solid var(--line);color:var(--ink-soft);font-size:14px}
   [hidden]{display:none !important}
   @media (max-width:520px){
@@ -96,11 +87,10 @@
 </head>
 <body>
 <div class="wrap">
-
 <header>
   <span class="mark">Track Yourself</span>
   <h1 id="pageTitle">Informativa sulla Privacy</h1>
-  <p class="updated" id="pageUpdated">Ultimo aggiornamento: 29 luglio 2026</p>
+  <p class="updated" id="pageUpdated">Ultimo aggiornamento: 30 luglio 2026</p>
   <div class="langs" role="group" aria-label="Lingua">
     <button type="button" id="btnIt" aria-pressed="true">Italiano</button>
     <button type="button" id="btnEn" aria-pressed="false">English</button>
@@ -109,7 +99,6 @@
 
 <!-- ITALIANO -->
 <main id="it">
-
   <section class="summary">
     <h2>In sintesi</h2>
     <ul>
@@ -142,10 +131,11 @@
     <li>date delle mestruazioni, durata e intensità del flusso, cicli registrati e previsioni;</li>
     <li>ovulazione, finestra fertile e dati relativi a un'eventuale gravidanza;</li>
     <li>sintomi (anche personalizzati), umore, benessere;</li>
-    <li>misurazioni come peso, altezza, BMI, temperatura e consumo di acqua;</li>
+    <li>misurazioni come peso, altezza, circonferenze corporee e consumo di acqua;</li>
     <li>assunzione della pillola o di farmaci e relativi promemoria;</li>
-    <li>note del diario personale ed eventuali immagini che scegli di allegare;</li>
+    <li>note del diario personale;</li>
     <li>i dati di profilo che decidi di inserire, come nome, età e data di nascita;</li>
+    <li>l'immagine del profilo, se scegli di impostarla;</li>
     <li>impostazioni dell'app: lingua, tema, PIN, preferenza di sblocco biometrico.</li>
   </ul>
   <p>Queste informazioni <strong>non vengono trasmesse a noi né a terzi</strong>. Non transitano su alcun server, non vengono caricate in cloud da parte nostra e non sono accessibili a nessuno al di fuori di chi utilizza il dispositivo.</p>
@@ -184,7 +174,7 @@
     <thead><tr><th>Autorizzazione</th><th>Perché serve</th></tr></thead>
     <tbody>
       <tr><td>Notifiche</td><td>Mostrare promemoria per ciclo, ovulazione, pillola e registrazione giornaliera. Le notifiche sono generate localmente sul dispositivo.</td></tr>
-      <tr><td>Galleria / fotocamera</td><td>Solo se scegli di allegare un'immagine a una nota del diario. L'immagine resta sul dispositivo.</td></tr>
+      <tr><td>Galleria / fotocamera</td><td>Solo se scegli di impostare un'immagine del profilo. L'immagine resta sul dispositivo.</td></tr>
       <tr><td>Biometria / blocco schermo</td><td>Solo per proteggere l'accesso all'app con impronta, volto o PIN. Il dato biometrico è gestito dal sistema operativo e non è mai accessibile all'app.</td></tr>
     </tbody>
   </table>
@@ -192,7 +182,7 @@
   <p>Puoi revocare ogni autorizzazione in qualsiasi momento dalle impostazioni del sistema operativo.</p>
 
   <h2><span class="n">5</span>Esportazione e condivisione dei dati</h2>
-  <p>L'app consente di esportare i tuoi dati in formato PDF, CSV o Excel e di condividerli tramite le funzioni del tuo dispositivo, ad esempio email, messaggistica o un tuo spazio cloud personale.</p>
+  <p>L'app consente di esportare i tuoi dati in formato PDF o CSV e di condividerli tramite le funzioni del tuo dispositivo, ad esempio email, messaggistica o un tuo spazio cloud personale.</p>
   <p>In quel momento <strong>sei tu a decidere di far uscire i dati dal dispositivo</strong>: dopo la condivisione, il trattamento dipende dall'applicazione o dal servizio che scegli e dal destinatario del file. Ti invitiamo a fare particolare attenzione, perché il file può contenere dati relativi alla tua salute.</p>
 
   <h2><span class="n">6</span>Basi giuridiche del trattamento</h2>
@@ -221,7 +211,7 @@
   <p>Ai sensi degli artt. 15-22 GDPR hai diritto di ottenere l'accesso ai tuoi dati, la rettifica, la cancellazione, la limitazione del trattamento e la portabilità, di opporti al trattamento e di revocare in qualsiasi momento il consenso prestato.</p>
   <p>Poiché i dati sanitari risiedono unicamente sul tuo dispositivo, molti di questi diritti puoi esercitarli direttamente e con effetto immediato:</p>
   <ul>
-    <li><strong>accesso e portabilità:</strong> funzione di esportazione in PDF, CSV o Excel;</li>
+    <li><strong>accesso e portabilità:</strong> funzione di esportazione in PDF o CSV;</li>
     <li><strong>rettifica:</strong> modifica o eliminazione delle singole voci dalle schermate dell'app;</li>
     <li><strong>cancellazione:</strong> eliminazione delle voci, cancellazione dei dati dell'app dalle impostazioni di sistema, oppure disinstallazione;</li>
     <li><strong>revoca del consenso pubblicitario:</strong> voce <strong>Impostazioni privacy</strong> nella sezione Profilo dell'app.</li>
@@ -254,7 +244,6 @@
 
 <!-- ENGLISH -->
 <main id="en" hidden>
-
   <section class="summary">
     <h2>Summary</h2>
     <ul>
@@ -285,10 +274,11 @@
     <li>period dates, flow duration and intensity, logged cycles and predictions;</li>
     <li>ovulation, fertile window and pregnancy-related data;</li>
     <li>symptoms (including custom ones), mood and wellbeing;</li>
-    <li>measurements such as weight, height, BMI, temperature and water intake;</li>
+    <li>measurements such as weight, height, body measurements and water intake;</li>
     <li>contraceptive pill or medication intake and reminders;</li>
-    <li>personal journal notes and any images you choose to attach;</li>
+    <li>personal journal notes;</li>
     <li>the profile details you choose to enter, such as name, age and date of birth;</li>
+    <li>your profile picture, if you choose to set one;</li>
     <li>app settings: language, theme, PIN, biometric unlock preference.</li>
   </ul>
   <p>This information is <strong>never transmitted to us or to third parties</strong>. It passes through no server, is not uploaded to any cloud service by us, and is not accessible to anyone other than the person using the device.</p>
@@ -322,7 +312,7 @@
     <thead><tr><th>Permission</th><th>Why it is needed</th></tr></thead>
     <tbody>
       <tr><td>Notifications</td><td>To show reminders for your cycle, ovulation, pill and daily logging. Notifications are generated locally on the device.</td></tr>
-      <tr><td>Photos / camera</td><td>Only if you choose to attach an image to a journal note. The image stays on the device.</td></tr>
+      <tr><td>Photos / camera</td><td>Only if you choose to set a profile picture. The image stays on the device.</td></tr>
       <tr><td>Biometrics / device lock</td><td>Only to protect access to the app with fingerprint, face or PIN. Biometric data is handled by the operating system and is never accessible to the app.</td></tr>
     </tbody>
   </table>
@@ -330,7 +320,7 @@
   <p>You can revoke any permission at any time in your operating system settings.</p>
 
   <h2><span class="n">5</span>Export and sharing</h2>
-  <p>The app lets you export your data as PDF, CSV or Excel and share it using your device's features, such as email, messaging or your own cloud storage.</p>
+  <p>The app lets you export your data as PDF or CSV and share it using your device's features, such as email, messaging or your own cloud storage.</p>
   <p>At that point <strong>you are the one choosing to move data off the device</strong>: after sharing, processing depends on the app or service you choose and on the recipient of the file. Please take particular care, as the file may contain data about your health.</p>
 
   <h2><span class="n">6</span>Legal bases</h2>
@@ -359,7 +349,7 @@
   <p>Under Articles 15-22 GDPR you have the right to access, rectification, erasure, restriction of processing and data portability, the right to object, and the right to withdraw your consent at any time.</p>
   <p>Because health data resides only on your device, you can exercise many of these rights directly and immediately:</p>
   <ul>
-    <li><strong>access and portability:</strong> export to PDF, CSV or Excel;</li>
+    <li><strong>access and portability:</strong> export to PDF or CSV;</li>
     <li><strong>rectification:</strong> editing or deleting entries within the app;</li>
     <li><strong>erasure:</strong> deleting entries, clearing the app's data in system settings, or uninstalling the app;</li>
     <li><strong>withdrawal of advertising consent:</strong> <strong>Privacy settings</strong> in the Profile section of the app.</li>
@@ -391,7 +381,6 @@
 </main>
 
 <footer>© Track Yourself</footer>
-
 </div>
 
 <script>
@@ -402,7 +391,6 @@
       bEn = document.getElementById('btnEn'),
       title = document.getElementById('pageTitle'),
       updated = document.getElementById('pageUpdated');
-
   function show(lang){
     var isIt = lang === 'it';
     it.hidden = !isIt;
@@ -411,13 +399,11 @@
     bEn.setAttribute('aria-pressed', !isIt);
     document.documentElement.lang = lang;
     title.textContent = isIt ? 'Informativa sulla Privacy' : 'Privacy Policy';
-    updated.textContent = isIt ? 'Ultimo aggiornamento: 29 luglio 2026' : 'Last updated: 29 July 2026';
+    updated.textContent = isIt ? 'Ultimo aggiornamento: 30 luglio 2026' : 'Last updated: 30 July 2026';
     document.title = 'Track Yourself — ' + title.textContent;
   }
-
   bIt.addEventListener('click', function(){ show('it'); });
   bEn.addEventListener('click', function(){ show('en'); });
-
   if ((navigator.language || '').toLowerCase().indexOf('it') !== 0) show('en');
 })();
 </script>
