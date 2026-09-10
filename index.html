@@ -25,7 +25,7 @@
   h1{font-size:26px;font-weight:800;letter-spacing:-.4px}
   .sub{color:var(--pink);font-weight:600;font-size:15px;margin-top:4px}
   .date{color:var(--muted);font-size:13px;margin-top:8px}
-  .langs{display:flex;gap:8px;justify-content:center;margin:20px 0 28px}
+  .langs{display:flex;gap:8px;justify-content:center;margin:20px 0 28px;flex-wrap:wrap}
   .langs button{
     border:1.5px solid var(--border);background:var(--card);color:var(--muted);
     padding:8px 20px;border-radius:30px;font-size:14px;font-weight:600;cursor:pointer;
@@ -73,11 +73,11 @@
   <div class="sub" data-lang="de">Datenschutzerklärung</div>
   <div class="sub" data-lang="es">Política de privacidad</div>
   <div class="sub" data-lang="fr">Politique de confidentialité</div>
-  <div class="date" data-lang="it">Ultimo aggiornamento: 14 agosto 2026</div>
-  <div class="date" data-lang="en">Last updated: 14 August 2026</div>
-  <div class="date" data-lang="de">Letzte Aktualisierung: 14. August 2026</div>
-  <div class="date" data-lang="es">Última actualización: 14 de agosto de 2026</div>
-  <div class="date" data-lang="fr">Dernière mise à jour : 14 août 2026</div>
+  <div class="date" data-lang="it">Ultimo aggiornamento: 4 settembre 2026</div>
+  <div class="date" data-lang="en">Last updated: 4 September 2026</div>
+  <div class="date" data-lang="de">Letzte Aktualisierung: 4. September 2026</div>
+  <div class="date" data-lang="es">Última actualización: 4 de septiembre de 2026</div>
+  <div class="date" data-lang="fr">Dernière mise à jour : 4 septembre 2026</div>
 </header>
 
 <div class="langs">
@@ -99,8 +99,8 @@
       <li>I tuoi dati sulla salute non vengono mai usati per la pubblicità.</li>
       <li>L'assistente del diario funziona offline: le sue risposte sono scritte all'interno dell'app e i tuoi messaggi non vengono inviati a nessuno.</li>
       <li>Puoi creare un file di backup con i tuoi dati e conservarlo dove preferisci. Quel file resta tuo: noi non lo riceviamo e non ne conserviamo copia.</li>
-      <li>L'app mostra annunci tramite Google AdMob. Per questa sola finalità, alcune informazioni tecniche del dispositivo possono essere trattate da Google in base alle tue scelte di consenso.</li>
-      <li>Se disinstalli l'app, i dati salvati sul dispositivo vengono eliminati con essa.</li>
+      <li>L'app mostra annunci tramite Google AdMob in quattro formati. Per questa sola finalità, alcune informazioni tecniche del dispositivo possono essere trattate da Google in base alle tue scelte di consenso.</li>
+      <li>La disinstallazione dell'app elimina i dati locali secondo il comportamento previsto dal sistema operativo.</li>
     </ul>
   </div>
 
@@ -134,8 +134,9 @@
       <li>l'immagine del profilo, se scegli di impostarla;</li>
       <li>impostazioni dell'app: lingua, tema, PIN, preferenza di sblocco biometrico, promemoria attivi e relativi orari.</li>
     </ul>
-    <p>Queste informazioni non vengono trasmesse a noi né a terzi. Non transitano su alcun server, non vengono caricate in cloud da parte nostra e non sono accessibili a nessuno al di fuori di chi utilizza il dispositivo.</p>
+    <p>Queste informazioni non vengono trasmesse a noi né a terzi. Non transitano su alcun server, non vengono caricate in cloud da parte nostra e non vengono trasmesse ai nostri server né caricate automaticamente su servizi cloud da noi gestiti.</p>
     <p>Parte di queste informazioni costituisce dati relativi alla salute, appartenenti alle categorie particolari di dati di cui all'art. 9 GDPR. È esattamente per questo che l'app è progettata per conservarli localmente, sotto il tuo controllo esclusivo.</p>
+    <p>Per proteggerli ulteriormente, i dati salvati tramite Hive sono cifrati con AES-256: la chiave di cifratura viene generata sul dispositivo e conservata nel sistema di archiviazione sicura del sistema operativo (Android Keystore), mai su disco in chiaro.</p>
 
     <h3>3.2 Statistiche e analisi del ciclo</h3>
     <p>La sezione Analisi del ciclo elabora i dati che hai registrato per mostrarti durata media del ciclo e delle mestruazioni, regolarità e cronologia dei cicli.</p>
@@ -149,19 +150,27 @@
     <p>Le risposte dell'assistente hanno finalità puramente informative e non costituiscono un parere medico.</p>
 
     <h3>3.4 Dati trattati per la pubblicità (Google AdMob)</h3>
-    <p>L'app mostra banner pubblicitari e annunci all'apertura tramite Google AdMob, servizio di Google Ireland Limited. Per erogare gli annunci, Google e i suoi partner pubblicitari possono trattare informazioni tecniche quali:</p>
+    <p>L'app mostra pubblicità tramite Google AdMob, servizio di Google Ireland Limited, in quattro formati:</p>
     <ul>
-      <li>l'identificatore pubblicitario del dispositivo (Android Advertising ID / IDFA);</li>
+      <li><strong>Banner</strong>: un riquadro pubblicitario visibile in una porzione della schermata principale.</li>
+      <li><strong>Annunci all'apertura</strong>: mostrati occasionalmente quando apri l'app.</li>
+      <li><strong>Annunci a schermo intero (interstitial)</strong>: mostrati in alcuni punti di passaggio tra una schermata di sola consultazione e un'altra, ad esempio uscendo dall'Analisi del ciclo, dalla Cronologia o dalle Domande frequenti. Non vengono mai mostrati mentre stai registrando dati o scrivendo nel diario.</li>
+      <li><strong>Video con ricompensa</strong>: un formato che scegli tu volontariamente di attivare. Guardando un video pubblicitario per intero, ricevi alcune ore senza alcuna pubblicità nell'app; puoi ripetere la visione per prolungare il periodo.</li>
+    </ul>
+    <p>Per erogare questi annunci, Google si avvale di una rete di partner pubblicitari terzi, il cui elenco aggiornato è consultabile all'interno del modulo di consenso descritto poco sotto. Google e questi partner possono trattare informazioni tecniche quali:</p>
+    <ul>
+      <li>l'identificatore pubblicitario del dispositivo (Android Advertising ID);</li>
       <li>indirizzo IP, tipo di dispositivo, sistema operativo, versione dell'app, lingua e paese approssimativo;</li>
       <li>interazioni con gli annunci, come visualizzazioni e clic.</li>
     </ul>
-    <p>I dati sanitari che inserisci nell'app non vengono in alcun caso trasmessi a Google, ad AdMob o ad altri circuiti pubblicitari, né utilizzati per personalizzare gli annunci. Il contenuto del tuo diario, i tuoi sintomi e le tue date non lasciano il dispositivo, quindi non sono tecnicamente disponibili per finalità pubblicitarie.</p>
+    <p>I dati sanitari che inserisci nell'app — cicli, sintomi, note, misurazioni — non vengono in alcun caso trasmessi a Google, ad AdMob o ad altri circuiti pubblicitari, né utilizzati per personalizzare gli annunci. Nessuna delle richieste pubblicitarie contiene informazioni sul tuo ciclo o sulla tua salute: il contenuto del tuo diario, i tuoi sintomi e le tue date non lasciano il dispositivo.</p>
     <p>Alla prima apertura dell'app, se ti trovi nello Spazio Economico Europeo, nel Regno Unito o in Svizzera, ti viene mostrato un modulo di consenso conforme al Transparency and Consent Framework di IAB Europe, gestito tramite la User Messaging Platform di Google. Da quel modulo puoi:</p>
     <ul>
       <li>acconsentire agli annunci personalizzati;</li>
       <li>rifiutare il consenso, continuando a vedere annunci non personalizzati;</li>
       <li>gestire in dettaglio le singole finalità e i singoli fornitori pubblicitari.</li>
     </ul>
+    <p>Nessuno dei quattro formati viene richiesto prima che il tuo consenso sia stato determinato. A seconda delle impostazioni configurate nel modulo di consenso, alcune finalità pubblicitarie possono basarsi sul tuo consenso esplicito, altre sul legittimo interesse di Google e dei suoi partner: il modulo indica sempre, per ciascuna finalità, quale base si applica e ti permette di gestire le tue preferenze.</p>
     <p>Puoi modificare la tua scelta in qualsiasi momento dalla voce <strong>Impostazioni privacy</strong>, nella sezione Impostazioni dell'app.</p>
     <p>Per approfondire: <a href="https://policies.google.com/privacy">Informativa sulla privacy di Google</a> e <a href="https://policies.google.com/technologies/partner-sites">Come Google utilizza i dati provenienti da siti e app dei partner</a>.</p>
 
@@ -200,10 +209,10 @@
     <h2><span class="n">6</span>Basi giuridiche del trattamento</h2>
     <table>
       <tr><th>Trattamento</th><th>Base giuridica</th></tr>
-      <tr><td>Dati su ciclo, sintomi, salute e diario salvati in locale</td><td>Il tuo consenso esplicito, art. 9, par. 2, lett. a) GDPR, manifestato con l'inserimento volontario dei dati nell'app.</td></tr>
+      <tr><td>Dati su ciclo, sintomi, salute e diario salvati in locale</td><td>Il tuo consenso esplicito, art. 9, par. 2, lett. a) GDPR. Prima di poter inserire qualsiasi dato sul ciclo, l'app ti mostra una schermata dedicata che spiega che si tratta di dati relativi alla tua salute e che restano solo sul dispositivo; puoi consultare questa informativa da quella stessa schermata, e solo confermando con un'azione esplicita ("Ho capito, continua") puoi procedere. La data e l'ora di questa conferma restano salvate sul tuo dispositivo, a tua disposizione come prova del consenso prestato.</td></tr>
       <tr><td>Funzionamento delle funzioni di base dell'app</td><td>Esecuzione del servizio che richiedi, art. 6, par. 1, lett. b) GDPR.</td></tr>
       <tr><td>Annunci personalizzati e relative finalità di misurazione</td><td>Il tuo consenso, art. 6, par. 1, lett. a) GDPR, raccolto tramite il modulo descritto al punto 3.4 e revocabile in ogni momento.</td></tr>
-      <tr><td>Annunci non personalizzati e sicurezza tecnica degli annunci</td><td>Legittimo interesse alla sostenibilità economica e al corretto funzionamento del servizio, art. 6, par. 1, lett. f) GDPR, nei limiti consentiti dalle policy di Google.</td></tr>
+      <tr><td>Annunci non personalizzati e sicurezza tecnica degli annunci</td><td>A seconda della configurazione del modulo di consenso: il tuo consenso, art. 6, par. 1, lett. a) GDPR, oppure legittimo interesse alla sostenibilità economica del servizio, art. 6, par. 1, lett. f) GDPR. Il modulo indica quale base si applica a ciascuna finalità.</td></tr>
     </table>
     <p>Il conferimento dei dati sulla salute è del tutto facoltativo: puoi usare l'app inserendo solo le informazioni che desideri.</p>
   </div>
@@ -218,7 +227,7 @@
   <div class="card">
     <h2><span class="n">8</span>Trasferimenti verso paesi terzi</h2>
     <p>Noi non trasferiamo i tuoi dati in alcun paese, perché non li riceviamo.</p>
-    <p>Google, in qualità di fornitore pubblicitario, può trattare i dati tecnici indicati al punto 3.4 anche al di fuori dello Spazio Economico Europeo, in particolare negli Stati Uniti, sulla base delle garanzie previste dal Capo V del GDPR: clausole contrattuali standard della Commissione europea e/o EU-U.S. Data Privacy Framework. I dettagli sono disponibili nell'informativa di Google.</p>
+    <p>Google, in qualità di fornitore pubblicitario, può trattare i dati tecnici indicati al punto 3.4 anche al di fuori dello Spazio Economico Europeo, in particolare negli Stati Uniti, sulla base dei meccanismi di trasferimento applicabili di volta in volta indicati da Google, quali le clausole contrattuali standard della Commissione europea e/o l'EU-U.S. Data Privacy Framework. I dettagli aggiornati sono disponibili nell'informativa di Google.</p>
   </div>
 
   <div class="card">
@@ -280,8 +289,8 @@
       <li>Your health data is never used for advertising.</li>
       <li>The journal assistant works offline: its answers are written inside the app and your messages are not sent to anyone.</li>
       <li>You can create a backup file of your data and keep it wherever you like. That file stays yours: we never receive it and keep no copy of it.</li>
-      <li>The app shows ads through Google AdMob. For that purpose only, certain technical device information may be processed by Google according to your consent choices.</li>
-      <li>If you uninstall the app, the data stored on your device is deleted with it.</li>
+      <li>The app shows ads through Google AdMob in four formats. For that purpose only, certain technical device information may be processed by Google according to your consent choices.</li>
+      <li>Uninstalling the app deletes local data according to the behaviour provided by the operating system.</li>
     </ul>
   </div>
 
@@ -313,8 +322,9 @@
       <li>your profile picture, if you choose to set one;</li>
       <li>app settings: language, theme, PIN, biometric unlock preference, active reminders and their times.</li>
     </ul>
-    <p>This information is never transmitted to us or to third parties. It passes through no server, is not uploaded to any cloud service by us, and is not accessible to anyone other than the person using the device.</p>
+    <p>This information is never transmitted to us or to third parties. It passes through no server, is not uploaded to any cloud service by us, and is not transmitted to our servers nor automatically uploaded to any cloud service we manage.</p>
     <p>Some of this information constitutes health data, a special category of personal data under Article 9 GDPR. That is precisely why the app is designed to keep it local and under your sole control.</p>
+    <p>For further protection, data saved through Hive is encrypted with AES-256: the encryption key is generated on the device and kept in the operating system's secure storage (Android Keystore), never on disk in plain form.</p>
 
     <h3>3.2 Statistics and cycle analysis</h3>
     <p>The Cycle analysis section processes the data you have logged to show your average cycle and period length, how regular your cycles are, and your cycle history.</p>
@@ -328,14 +338,22 @@
     <p>The assistant's answers are informational only and do not constitute medical advice.</p>
 
     <h3>3.4 Data processed for advertising (Google AdMob)</h3>
-    <p>The app displays banner and app-open ads through Google AdMob, a service of Google Ireland Limited. To serve ads, Google and its advertising partners may process technical information such as:</p>
+    <p>The app displays advertising through Google AdMob, a service of Google Ireland Limited, in four formats:</p>
     <ul>
-      <li>the device advertising identifier (Android Advertising ID / IDFA);</li>
+      <li><strong>Banner</strong>: an ad box visible in part of the main screen.</li>
+      <li><strong>App-open ads</strong>: shown occasionally when you open the app.</li>
+      <li><strong>Full-screen ads (interstitial)</strong>: shown at certain transition points between browsing screens, for example when leaving Cycle Analysis, History, or the FAQ. Never shown while you are logging data or writing in the journal.</li>
+      <li><strong>Rewarded video</strong>: a format you choose to activate voluntarily. Watching a full advertising video gives you a few hours with no ads in the app; you can watch again to extend the period.</li>
+    </ul>
+    <p>To serve these ads, Google relies on a network of third-party advertising partners, whose up-to-date list is available within the consent form described below. Google and these partners may process technical information such as:</p>
+    <ul>
+      <li>the device advertising identifier (Android Advertising ID);</li>
       <li>IP address, device type, operating system, app version, language and approximate country;</li>
       <li>ad interactions such as impressions and clicks.</li>
     </ul>
-    <p>The health data you enter in the app is never transmitted to Google, AdMob or any advertising network, and is never used to personalise ads. Your journal, symptoms and dates do not leave your device, and are therefore not technically available for advertising purposes.</p>
+    <p>The health data you enter in the app — cycles, symptoms, notes, measurements — is never transmitted to Google, AdMob or any advertising network, and is never used to personalise ads. None of the ad requests contain information about your cycle or your health: your journal, symptoms and dates do not leave the device.</p>
     <p>On first launch, if you are in the European Economic Area, the United Kingdom or Switzerland, you are shown a consent form compliant with the IAB Europe Transparency and Consent Framework, managed through Google's User Messaging Platform. From that form you can consent to personalised ads, refuse consent (you will still see non-personalised ads), or manage individual purposes and vendors.</p>
+    <p>None of the four formats is requested before your consent has been determined. Depending on how the consent form is configured, some advertising purposes may rely on your explicit consent, others on the legitimate interest of Google and its partners: the form always indicates, for each purpose, which basis applies and lets you manage your preferences.</p>
     <p>You can change your choice at any time under <strong>Privacy settings</strong> in the Settings section of the app.</p>
     <p>Further information: <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use our services</a>.</p>
 
@@ -374,10 +392,10 @@
     <h2><span class="n">6</span>Legal bases</h2>
     <table>
       <tr><th>Processing</th><th>Legal basis</th></tr>
-      <tr><td>Cycle, symptom, health and journal data stored locally</td><td>Your explicit consent, Art. 9(2)(a) GDPR, given by voluntarily entering the data.</td></tr>
+      <tr><td>Cycle, symptom, health and journal data stored locally</td><td>Your explicit consent, Art. 9(2)(a) GDPR. Before you can enter any cycle data, the app shows you a dedicated screen explaining that this is health data which stays on your device only; you can read this policy from that same screen, and only by confirming with an explicit action ("I understand, continue") can you proceed. The date and time of this confirmation are saved on your device, available to you as proof of the consent given.</td></tr>
       <tr><td>Core app functionality</td><td>Performance of the service you request, Art. 6(1)(b) GDPR.</td></tr>
       <tr><td>Personalised advertising and related measurement</td><td>Your consent, Art. 6(1)(a) GDPR, collected through the form described in 3.4 and revocable at any time.</td></tr>
-      <tr><td>Non-personalised advertising and ad security</td><td>Legitimate interest in the financial sustainability and correct operation of the service, Art. 6(1)(f) GDPR, within the limits allowed by Google's policies.</td></tr>
+      <tr><td>Non-personalised advertising and ad security</td><td>Depending on the consent form configuration: your consent, Art. 6(1)(a) GDPR, or legitimate interest in the financial sustainability of the service, Art. 6(1)(f) GDPR. The form indicates which basis applies to each purpose.</td></tr>
     </table>
     <p>Providing health data is entirely optional: you can use the app entering only what you wish.</p>
   </div>
@@ -392,7 +410,7 @@
   <div class="card">
     <h2><span class="n">8</span>International transfers</h2>
     <p>We transfer no data anywhere, because we never receive it.</p>
-    <p>Google, as advertising provider, may process the technical data listed in 3.4 outside the European Economic Area, in particular in the United States, relying on the safeguards under Chapter V GDPR: European Commission standard contractual clauses and/or the EU-U.S. Data Privacy Framework. Details are available in Google's own policy.</p>
+    <p>Google, as advertising provider, may process the technical data listed in 3.4 outside the European Economic Area, in particular in the United States, relying on the transfer mechanisms indicated by Google from time to time, such as European Commission standard contractual clauses and/or the EU-U.S. Data Privacy Framework. Updated details are available in Google's own policy.</p>
   </div>
 
   <div class="card">
@@ -443,6 +461,7 @@
 
 </div>
 
+<!-- =============================== DEUTSCH ============================== -->
 <div data-lang="de">
 
   <div class="card summary">
@@ -453,8 +472,8 @@
       <li>Deine Gesundheitsdaten werden niemals für Werbung verwendet.</li>
       <li>Der Tagebuch-Assistent funktioniert offline: Seine Antworten sind in der App enthalten, und deine Nachrichten werden an niemanden gesendet.</li>
       <li>Du kannst eine Sicherungsdatei mit deinen Daten erstellen und sie aufbewahren, wo du möchtest. Diese Datei bleibt deine: Wir erhalten sie nie und behalten keine Kopie davon.</li>
-      <li>Die App zeigt Werbung über Google AdMob. Nur zu diesem Zweck können bestimmte technische Geräteinformationen von Google gemäß deiner Einwilligungswahl verarbeitet werden.</li>
-      <li>Wenn du die App deinstallierst, werden die auf dem Gerät gespeicherten Daten mit ihr gelöscht.</li>
+      <li>Die App zeigt Werbung über Google AdMob in vier Formaten. Nur zu diesem Zweck können bestimmte technische Geräteinformationen von Google gemäß deiner Einwilligungswahl verarbeitet werden.</li>
+      <li>Die Deinstallation der App löscht die lokalen Daten gemäß dem vom Betriebssystem vorgesehenen Verhalten.</li>
     </ul>
   </div>
 
@@ -488,8 +507,9 @@
       <li>das Profilbild, falls du eines festlegst;</li>
       <li>App-Einstellungen: Sprache, Design, PIN, biometrische Entsperrpräferenz, aktive Erinnerungen und deren Zeiten.</li>
     </ul>
-    <p>Diese Informationen werden weder an uns noch an Dritte übermittelt. Sie durchlaufen keinen Server, werden nicht von uns in die Cloud hochgeladen und sind für niemanden außer der Person zugänglich, die das Gerät benutzt.</p>
+    <p>Diese Informationen werden weder an uns noch an Dritte übermittelt. Sie durchlaufen keinen Server, werden nicht von uns in die Cloud hochgeladen und werden nicht an unsere Server übermittelt und nicht automatisch in einen von uns verwalteten Cloud-Dienst hochgeladen.</p>
     <p>Ein Teil dieser Informationen stellt Gesundheitsdaten dar, die zu den besonderen Kategorien personenbezogener Daten gemäß Art. 9 DSGVO gehören. Genau deshalb ist die App so konzipiert, dass sie diese Daten lokal und unter deiner alleinigen Kontrolle speichert.</p>
+    <p>Zum weiteren Schutz werden die über Hive gespeicherten Daten mit AES-256 verschlüsselt: Der Verschlüsselungsschlüssel wird auf dem Gerät erzeugt und im sicheren Speicher des Betriebssystems (Android Keystore) aufbewahrt, niemals unverschlüsselt auf der Festplatte.</p>
 
     <h3>3.2 Statistiken und Zyklusanalyse</h3>
     <p>Der Bereich Zyklusanalyse verarbeitet die von dir erfassten Daten, um dir die durchschnittliche Zyklus- und Menstruationsdauer, die Regelmäßigkeit und den Zyklusverlauf anzuzeigen.</p>
@@ -503,19 +523,22 @@
     <p>Die Antworten des Assistenten dienen ausschließlich Informationszwecken und stellen keine medizinische Beratung dar.</p>
 
     <h3>3.4 Für Werbung verarbeitete Daten (Google AdMob)</h3>
-    <p>Die App zeigt Bannerwerbung und Anzeigen beim Öffnen über Google AdMob, einen Dienst von Google Ireland Limited. Um Anzeigen bereitzustellen, können Google und seine Werbepartner technische Informationen verarbeiten wie:</p>
+    <p>Die App zeigt Werbung über Google AdMob, einen Dienst von Google Ireland Limited, in vier Formaten:</p>
     <ul>
-      <li>die Werbekennung des Geräts (Android Advertising ID / IDFA);</li>
+      <li><strong>Banner</strong>: ein Werbefeld, das in einem Teil des Hauptbildschirms sichtbar ist.</li>
+      <li><strong>Anzeigen beim Öffnen</strong>: gelegentlich angezeigt, wenn du die App öffnest.</li>
+      <li><strong>Vollbildanzeigen (Interstitial)</strong>: an bestimmten Übergangspunkten zwischen reinen Ansichtsbildschirmen angezeigt, zum Beispiel beim Verlassen der Zyklusanalyse, des Verlaufs oder der häufig gestellten Fragen. Werden niemals angezeigt, während du Daten erfasst oder im Tagebuch schreibst.</li>
+      <li><strong>Belohnungsvideo</strong>: ein Format, das du freiwillig aktivierst. Wenn du ein vollständiges Werbevideo ansiehst, erhältst du einige Stunden ohne Werbung in der App; du kannst es erneut ansehen, um den Zeitraum zu verlängern.</li>
+    </ul>
+    <p>Um diese Anzeigen bereitzustellen, greift Google auf ein Netzwerk von Drittanbieter-Werbepartnern zurück, deren aktuelle Liste im weiter unten beschriebenen Einwilligungsformular einsehbar ist. Google und diese Partner können technische Informationen verarbeiten wie:</p>
+    <ul>
+      <li>die Werbekennung des Geräts (Android Advertising ID);</li>
       <li>IP-Adresse, Gerätetyp, Betriebssystem, App-Version, Sprache und ungefähres Land;</li>
       <li>Interaktionen mit Anzeigen, wie Ansichten und Klicks.</li>
     </ul>
-    <p>Die Gesundheitsdaten, die du in die App eingibst, werden niemals an Google, AdMob oder andere Werbenetzwerke übermittelt, noch werden sie zur Personalisierung von Anzeigen verwendet. Der Inhalt deines Tagebuchs, deine Symptome und deine Daten verlassen das Gerät nicht und stehen daher technisch nicht für Werbezwecke zur Verfügung.</p>
-    <p>Beim ersten Öffnen der App wird dir, wenn du dich im Europäischen Wirtschaftsraum, im Vereinigten Königreich oder in der Schweiz befindest, ein Einwilligungsformular angezeigt, das dem Transparency and Consent Framework von IAB Europe entspricht, verwaltet über die User Messaging Platform von Google. Von diesem Formular aus kannst du:</p>
-    <ul>
-      <li>personalisierter Werbung zustimmen;</li>
-      <li>die Einwilligung ablehnen und weiterhin nicht personalisierte Anzeigen sehen;</li>
-      <li>einzelne Zwecke und Anbieter im Detail verwalten.</li>
-    </ul>
+    <p>Die Gesundheitsdaten, die du in die App eingibst — Zyklen, Symptome, Notizen, Messungen — werden niemals an Google, AdMob oder andere Werbenetzwerke übermittelt, noch werden sie zur Personalisierung von Anzeigen verwendet. Keine der Werbeanfragen enthält Informationen über deinen Zyklus oder deine Gesundheit: Der Inhalt deines Tagebuchs, deine Symptome und deine Daten verlassen das Gerät nicht.</p>
+    <p>Beim ersten Öffnen der App wird dir, wenn du dich im Europäischen Wirtschaftsraum, im Vereinigten Königreich oder in der Schweiz befindest, ein Einwilligungsformular angezeigt, das dem Transparency and Consent Framework von IAB Europe entspricht, verwaltet über die User Messaging Platform von Google. Von diesem Formular aus kannst du personalisierter Werbung zustimmen, die Einwilligung ablehnen (du siehst weiterhin nicht personalisierte Anzeigen) oder einzelne Zwecke und Anbieter im Detail verwalten.</p>
+    <p>Keines der vier Formate wird angefordert, bevor deine Einwilligung festgestellt wurde. Je nach Konfiguration des Einwilligungsformulars können sich manche Werbezwecke auf deine ausdrückliche Einwilligung stützen, andere auf das berechtigte Interesse von Google und seinen Partnern: Das Formular zeigt für jeden Zweck an, welche Grundlage gilt, und ermöglicht dir, deine Einstellungen zu verwalten.</p>
     <p>Du kannst deine Wahl jederzeit über <strong>Datenschutzeinstellungen</strong> im Bereich Einstellungen der App ändern.</p>
     <p>Weitere Informationen: <a href="https://policies.google.com/privacy">Datenschutzerklärung von Google</a> und <a href="https://policies.google.com/technologies/partner-sites">Wie Google Daten von Websites und Apps von Partnern verwendet</a>.</p>
 
@@ -554,10 +577,10 @@
     <h2><span class="n">6</span>Rechtsgrundlagen der Verarbeitung</h2>
     <table>
       <tr><th>Verarbeitung</th><th>Rechtsgrundlage</th></tr>
-      <tr><td>Lokal gespeicherte Daten zu Zyklus, Symptomen, Gesundheit und Tagebuch</td><td>Deine ausdrückliche Einwilligung, Art. 9 Abs. 2 lit. a DSGVO, ausgedrückt durch die freiwillige Eingabe der Daten in der App.</td></tr>
+      <tr><td>Lokal gespeicherte Daten zu Zyklus, Symptomen, Gesundheit und Tagebuch</td><td>Deine ausdrückliche Einwilligung, Art. 9 Abs. 2 lit. a DSGVO. Bevor du Zyklusdaten eingeben kannst, zeigt dir die App einen eigenen Bildschirm, der erklärt, dass es sich um Gesundheitsdaten handelt, die nur auf deinem Gerät verbleiben; du kannst diese Erklärung von diesem Bildschirm aus lesen, und nur durch Bestätigung mit einer ausdrücklichen Handlung („Verstanden, weiter“) kannst du fortfahren. Datum und Uhrzeit dieser Bestätigung werden auf deinem Gerät gespeichert und stehen dir als Nachweis der erteilten Einwilligung zur Verfügung.</td></tr>
       <tr><td>Funktionieren der Grundfunktionen der App</td><td>Erfüllung des von dir angeforderten Dienstes, Art. 6 Abs. 1 lit. b DSGVO.</td></tr>
       <tr><td>Personalisierte Werbung und zugehörige Messzwecke</td><td>Deine Einwilligung, Art. 6 Abs. 1 lit. a DSGVO, eingeholt über das in Punkt 3.4 beschriebene Formular und jederzeit widerrufbar.</td></tr>
-      <tr><td>Nicht personalisierte Werbung und technische Sicherheit der Anzeigen</td><td>Berechtigtes Interesse an der wirtschaftlichen Nachhaltigkeit und dem ordnungsgemäßen Betrieb des Dienstes, Art. 6 Abs. 1 lit. f DSGVO, im Rahmen der von Google zugelassenen Richtlinien.</td></tr>
+      <tr><td>Nicht personalisierte Werbung und technische Sicherheit der Anzeigen</td><td>Je nach Konfiguration des Einwilligungsformulars: deine Einwilligung, Art. 6 Abs. 1 lit. a DSGVO, oder berechtigtes Interesse an der wirtschaftlichen Nachhaltigkeit des Dienstes, Art. 6 Abs. 1 lit. f DSGVO. Das Formular zeigt an, welche Grundlage für welchen Zweck gilt.</td></tr>
     </table>
     <p>Die Angabe von Gesundheitsdaten ist völlig freiwillig: Du kannst die App nutzen und nur die Informationen eingeben, die du möchtest.</p>
   </div>
@@ -572,7 +595,7 @@
   <div class="card">
     <h2><span class="n">8</span>Übermittlungen in Drittländer</h2>
     <p>Wir übermitteln deine Daten in kein Land, weil wir sie nie erhalten.</p>
-    <p>Google kann als Werbeanbieter die in Punkt 3.4 genannten technischen Daten auch außerhalb des Europäischen Wirtschaftsraums verarbeiten, insbesondere in den Vereinigten Staaten, auf Grundlage der in Kapitel V der DSGVO vorgesehenen Garantien: Standardvertragsklauseln der Europäischen Kommission und/oder EU-U.S. Data Privacy Framework. Details sind in der Erklärung von Google verfügbar.</p>
+    <p>Google kann als Werbeanbieter die in Punkt 3.4 genannten technischen Daten auch außerhalb des Europäischen Wirtschaftsraums verarbeiten, insbesondere in den Vereinigten Staaten, auf Grundlage der jeweils von Google angegebenen Übermittlungsmechanismen, wie Standardvertragsklauseln der Europäischen Kommission und/oder dem EU-U.S. Data Privacy Framework. Aktuelle Details sind in der Erklärung von Google verfügbar.</p>
   </div>
 
   <div class="card">
@@ -623,6 +646,7 @@
 
 </div>
 
+<!-- =============================== ESPAÑOL ============================== -->
 <div data-lang="es">
 
   <div class="card summary">
@@ -633,8 +657,8 @@
       <li>Tus datos de salud nunca se utilizan para publicidad.</li>
       <li>El asistente del diario funciona sin conexión: sus respuestas están escritas dentro de la app y tus mensajes no se envían a nadie.</li>
       <li>Puedes crear un archivo de copia de seguridad con tus datos y conservarlo donde prefieras. Ese archivo sigue siendo tuyo: nosotros nunca lo recibimos ni conservamos ninguna copia.</li>
-      <li>La app muestra anuncios a través de Google AdMob. Solo para esta finalidad, Google puede tratar cierta información técnica del dispositivo según tus elecciones de consentimiento.</li>
-      <li>Si desinstalas la app, los datos guardados en el dispositivo se eliminan con ella.</li>
+      <li>La app muestra anuncios a través de Google AdMob en cuatro formatos. Solo para esta finalidad, Google puede tratar cierta información técnica del dispositivo según tus elecciones de consentimiento.</li>
+      <li>La desinstalación de la app elimina los datos locales según el comportamiento previsto por el sistema operativo.</li>
     </ul>
   </div>
 
@@ -668,8 +692,9 @@
       <li>la imagen de perfil, si eliges establecerla;</li>
       <li>ajustes de la app: idioma, tema, PIN, preferencia de desbloqueo biométrico, recordatorios activos y sus horarios.</li>
     </ul>
-    <p>Esta información no se transmite ni a nosotros ni a terceros. No pasa por ningún servidor, no se sube a la nube por nuestra parte y no es accesible para nadie fuera de quien utiliza el dispositivo.</p>
+    <p>Esta información no se transmite ni a nosotros ni a terceros. No pasa por ningún servidor, no se sube a la nube por nuestra parte y no se transmite a nuestros servidores ni se sube automáticamente a ningún servicio en la nube gestionado por nosotros.</p>
     <p>Parte de esta información constituye datos relativos a la salud, pertenecientes a las categorías especiales de datos del art. 9 RGPD. Es precisamente por eso que la app está diseñada para conservarlos localmente, bajo tu control exclusivo.</p>
+    <p>Para mayor protección, los datos guardados mediante Hive están cifrados con AES-256: la clave de cifrado se genera en el dispositivo y se conserva en el almacenamiento seguro del sistema operativo (Android Keystore), nunca en el disco en forma legible.</p>
 
     <h3>3.2 Estadísticas y análisis del ciclo</h3>
     <p>La sección Análisis del ciclo procesa los datos que has registrado para mostrarte la duración media del ciclo y de la menstruación, la regularidad y el historial de ciclos.</p>
@@ -683,19 +708,22 @@
     <p>Las respuestas del asistente tienen finalidad puramente informativa y no constituyen asesoramiento médico.</p>
 
     <h3>3.4 Datos tratados para publicidad (Google AdMob)</h3>
-    <p>La app muestra anuncios en banner y al abrir a través de Google AdMob, servicio de Google Ireland Limited. Para servir anuncios, Google y sus socios publicitarios pueden tratar información técnica como:</p>
+    <p>La app muestra publicidad a través de Google AdMob, servicio de Google Ireland Limited, en cuatro formatos:</p>
     <ul>
-      <li>el identificador publicitario del dispositivo (Android Advertising ID / IDFA);</li>
+      <li><strong>Banner</strong>: un recuadro publicitario visible en una parte de la pantalla principal.</li>
+      <li><strong>Anuncios al abrir</strong>: se muestran ocasionalmente al abrir la app.</li>
+      <li><strong>Anuncios a pantalla completa (interstitial)</strong>: se muestran en ciertos puntos de transición entre pantallas de solo consulta, por ejemplo al salir del Análisis del ciclo, del Historial o de las Preguntas frecuentes. Nunca se muestran mientras registras datos o escribes en el diario.</li>
+      <li><strong>Vídeo con recompensa</strong>: un formato que tú eliges activar voluntariamente. Al ver un vídeo publicitario completo, recibes unas horas sin publicidad en la app; puedes repetir la visualización para prolongar el periodo.</li>
+    </ul>
+    <p>Para servir estos anuncios, Google recurre a una red de socios publicitarios externos, cuya lista actualizada puede consultarse en el formulario de consentimiento descrito más abajo. Google y estos socios pueden tratar información técnica como:</p>
+    <ul>
+      <li>el identificador publicitario del dispositivo (Android Advertising ID);</li>
       <li>dirección IP, tipo de dispositivo, sistema operativo, versión de la app, idioma y país aproximado;</li>
       <li>interacciones con los anuncios, como visualizaciones y clics.</li>
     </ul>
-    <p>Los datos de salud que introduces en la app nunca se transmiten a Google, a AdMob ni a otras redes publicitarias, ni se utilizan para personalizar los anuncios. El contenido de tu diario, tus síntomas y tus fechas no salen del dispositivo, por lo que no están técnicamente disponibles para fines publicitarios.</p>
-    <p>Al abrir la app por primera vez, si te encuentras en el Espacio Económico Europeo, el Reino Unido o Suiza, se te muestra un formulario de consentimiento conforme al Transparency and Consent Framework de IAB Europe, gestionado a través de la User Messaging Platform de Google. Desde ese formulario puedes:</p>
-    <ul>
-      <li>consentir los anuncios personalizados;</li>
-      <li>rechazar el consentimiento, continuando viendo anuncios no personalizados;</li>
-      <li>gestionar en detalle las finalidades y proveedores publicitarios individuales.</li>
-    </ul>
+    <p>Los datos de salud que introduces en la app — ciclos, síntomas, notas, mediciones — nunca se transmiten a Google, a AdMob ni a otras redes publicitarias, ni se utilizan para personalizar los anuncios. Ninguna de las solicitudes publicitarias contiene información sobre tu ciclo o tu salud: tu diario, tus síntomas y tus fechas no salen del dispositivo.</p>
+    <p>Al abrir la app por primera vez, si te encuentras en el Espacio Económico Europeo, el Reino Unido o Suiza, se te muestra un formulario de consentimiento conforme al Transparency and Consent Framework de IAB Europe, gestionado a través de la User Messaging Platform de Google. Desde ese formulario puedes consentir los anuncios personalizados, rechazar el consentimiento (seguirás viendo anuncios no personalizados), o gestionar en detalle las finalidades y proveedores individuales.</p>
+    <p>Ninguno de los cuatro formatos se solicita antes de que se haya determinado tu consentimiento. Según cómo esté configurado el formulario de consentimiento, algunas finalidades publicitarias pueden basarse en tu consentimiento explícito, otras en el interés legítimo de Google y sus socios: el formulario siempre indica, para cada finalidad, qué base se aplica y te permite gestionar tus preferencias.</p>
     <p>Puedes modificar tu elección en cualquier momento desde <strong>Ajustes de privacidad</strong>, en la sección Ajustes de la app.</p>
     <p>Para más información: <a href="https://policies.google.com/privacy">Política de privacidad de Google</a> y <a href="https://policies.google.com/technologies/partner-sites">Cómo utiliza Google los datos de sitios y apps de sus socios</a>.</p>
 
@@ -734,10 +762,10 @@
     <h2><span class="n">6</span>Bases jurídicas del tratamiento</h2>
     <table>
       <tr><th>Tratamiento</th><th>Base jurídica</th></tr>
-      <tr><td>Datos de ciclo, síntomas, salud y diario guardados localmente</td><td>Tu consentimiento explícito, art. 9.2.a RGPD, manifestado mediante la introducción voluntaria de los datos en la app.</td></tr>
+      <tr><td>Datos de ciclo, síntomas, salud y diario guardados localmente</td><td>Tu consentimiento explícito, art. 9.2.a RGPD. Antes de poder introducir cualquier dato del ciclo, la app te muestra una pantalla dedicada que explica que se trata de datos relativos a tu salud y que permanecen solo en el dispositivo; puedes consultar esta información desde esa misma pantalla, y solo confirmando con una acción explícita («Entendido, continuar») puedes proceder. La fecha y hora de esta confirmación quedan guardadas en tu dispositivo, a tu disposición como prueba del consentimiento prestado.</td></tr>
       <tr><td>Funcionamiento de las funciones básicas de la app</td><td>Ejecución del servicio que solicitas, art. 6.1.b RGPD.</td></tr>
       <tr><td>Anuncios personalizados y sus finalidades de medición</td><td>Tu consentimiento, art. 6.1.a RGPD, recogido mediante el formulario descrito en el punto 3.4 y revocable en cualquier momento.</td></tr>
-      <tr><td>Anuncios no personalizados y seguridad técnica de los anuncios</td><td>Interés legítimo en la sostenibilidad económica y el correcto funcionamiento del servicio, art. 6.1.f RGPD, dentro de los límites permitidos por las políticas de Google.</td></tr>
+      <tr><td>Anuncios no personalizados y seguridad técnica de los anuncios</td><td>Según la configuración del formulario de consentimiento: tu consentimiento, art. 6.1.a RGPD, o interés legítimo en la sostenibilidad económica del servicio, art. 6.1.f RGPD. El formulario indica qué base se aplica a cada finalidad.</td></tr>
     </table>
     <p>Proporcionar datos de salud es totalmente opcional: puedes usar la app introduciendo solo la información que desees.</p>
   </div>
@@ -752,7 +780,7 @@
   <div class="card">
     <h2><span class="n">8</span>Transferencias a terceros países</h2>
     <p>Nosotros no transferimos tus datos a ningún país, porque nunca los recibimos.</p>
-    <p>Google, como proveedor publicitario, puede tratar los datos técnicos indicados en el punto 3.4 también fuera del Espacio Económico Europeo, en particular en Estados Unidos, basándose en las garantías previstas en el Capítulo V del RGPD: cláusulas contractuales tipo de la Comisión Europea y/o el Marco de Privacidad de Datos UE-EE.UU. Los detalles están disponibles en la política de Google.</p>
+    <p>Google, como proveedor publicitario, puede tratar los datos técnicos indicados en el punto 3.4 también fuera del Espacio Económico Europeo, en particular en Estados Unidos, basándose en los mecanismos de transferencia que Google indique en cada momento, como las cláusulas contractuales tipo de la Comisión Europea y/o el Marco de Privacidad de Datos UE-EE.UU. Los detalles actualizados están disponibles en la política de Google.</p>
   </div>
 
   <div class="card">
@@ -803,6 +831,7 @@
 
 </div>
 
+<!-- =============================== FRANÇAIS ============================== -->
 <div data-lang="fr">
 
   <div class="card summary">
@@ -813,8 +842,8 @@
       <li>Vos données de santé ne sont jamais utilisées à des fins publicitaires.</li>
       <li>L'assistant du journal fonctionne hors ligne : ses réponses sont écrites à l'intérieur de l'application et vos messages ne sont envoyés à personne.</li>
       <li>Vous pouvez créer un fichier de sauvegarde de vos données et le conserver où vous le souhaitez. Ce fichier reste le vôtre : nous ne le recevons jamais et n'en conservons aucune copie.</li>
-      <li>L'application affiche des publicités via Google AdMob. Uniquement à cette fin, certaines informations techniques de l'appareil peuvent être traitées par Google selon vos choix de consentement.</li>
-      <li>Si vous désinstallez l'application, les données enregistrées sur l'appareil sont supprimées avec elle.</li>
+      <li>L'application affiche des publicités via Google AdMob selon quatre formats. Uniquement à cette fin, certaines informations techniques de l'appareil peuvent être traitées par Google selon vos choix de consentement.</li>
+      <li>La désinstallation de l'application supprime les données locales selon le comportement prévu par le système d'exploitation.</li>
     </ul>
   </div>
 
@@ -848,8 +877,9 @@
       <li>la photo de profil, si vous choisissez d'en définir une ;</li>
       <li>paramètres de l'application : langue, thème, code PIN, préférence de déverrouillage biométrique, rappels actifs et leurs horaires.</li>
     </ul>
-    <p>Ces informations ne sont jamais transmises ni à nous ni à des tiers. Elles ne transitent par aucun serveur, ne sont pas téléchargées dans le cloud par nos soins et ne sont accessibles à personne d'autre que la personne utilisant l'appareil.</p>
+    <p>Ces informations ne sont jamais transmises ni à nous ni à des tiers. Elles ne transitent par aucun serveur, ne sont pas téléchargées dans le cloud par nos soins et ne sont transmises à nos serveurs ni téléchargées automatiquement vers un service cloud que nous gérons.</p>
     <p>Une partie de ces informations constitue des données de santé, appartenant aux catégories particulières de données au sens de l'art. 9 RGPD. C'est précisément pour cela que l'application est conçue pour les conserver localement, sous votre seul contrôle.</p>
+    <p>Pour une protection supplémentaire, les données enregistrées via Hive sont chiffrées avec AES-256 : la clé de chiffrement est générée sur l'appareil et conservée dans le stockage sécurisé du système d'exploitation (Android Keystore), jamais en clair sur le disque.</p>
 
     <h3>3.2 Statistiques et analyse du cycle</h3>
     <p>La section Analyse du cycle traite les données que vous avez enregistrées pour vous montrer la durée moyenne du cycle et des règles, la régularité et l'historique des cycles.</p>
@@ -863,19 +893,22 @@
     <p>Les réponses de l'assistant ont une finalité purement informative et ne constituent pas un avis médical.</p>
 
     <h3>3.4 Données traitées à des fins publicitaires (Google AdMob)</h3>
-    <p>L'application affiche des bannières publicitaires et des annonces à l'ouverture via Google AdMob, un service de Google Ireland Limited. Pour diffuser des annonces, Google et ses partenaires publicitaires peuvent traiter des informations techniques telles que :</p>
+    <p>L'application affiche des publicités via Google AdMob, un service de Google Ireland Limited, selon quatre formats :</p>
     <ul>
-      <li>l'identifiant publicitaire de l'appareil (Android Advertising ID / IDFA) ;</li>
+      <li><strong>Bannière</strong> : un encart publicitaire visible dans une partie de l'écran principal.</li>
+      <li><strong>Annonces à l'ouverture</strong> : affichées occasionnellement lorsque vous ouvrez l'application.</li>
+      <li><strong>Annonces plein écran (interstitial)</strong> : affichées à certains points de transition entre des écrans de simple consultation, par exemple en quittant l'Analyse du cycle, l'Historique ou la Foire aux questions. Jamais affichées pendant que vous saisissez des données ou écrivez dans le journal.</li>
+      <li><strong>Vidéo récompensée</strong> : un format que vous choisissez d'activer volontairement. En regardant une vidéo publicitaire en entier, vous bénéficiez de quelques heures sans publicité dans l'application ; vous pouvez la regarder à nouveau pour prolonger la période.</li>
+    </ul>
+    <p>Pour diffuser ces annonces, Google s'appuie sur un réseau de partenaires publicitaires tiers, dont la liste à jour est consultable dans le formulaire de consentement décrit ci-dessous. Google et ces partenaires peuvent traiter des informations techniques telles que :</p>
+    <ul>
+      <li>l'identifiant publicitaire de l'appareil (Android Advertising ID) ;</li>
       <li>adresse IP, type d'appareil, système d'exploitation, version de l'application, langue et pays approximatif ;</li>
       <li>interactions avec les annonces, telles que les affichages et les clics.</li>
     </ul>
-    <p>Les données de santé que vous saisissez dans l'application ne sont en aucun cas transmises à Google, à AdMob ou à d'autres réseaux publicitaires, ni utilisées pour personnaliser les annonces. Le contenu de votre journal, vos symptômes et vos dates ne quittent pas l'appareil, et ne sont donc pas techniquement disponibles à des fins publicitaires.</p>
-    <p>À la première ouverture de l'application, si vous vous trouvez dans l'Espace économique européen, au Royaume-Uni ou en Suisse, un formulaire de consentement conforme au Transparency and Consent Framework de IAB Europe vous est présenté, géré via la User Messaging Platform de Google. Depuis ce formulaire, vous pouvez :</p>
-    <ul>
-      <li>consentir aux annonces personnalisées ;</li>
-      <li>refuser le consentement, en continuant à voir des annonces non personnalisées ;</li>
-      <li>gérer en détail les finalités et fournisseurs publicitaires individuels.</li>
-    </ul>
+    <p>Les données de santé que vous saisissez dans l'application — cycles, symptômes, notes, mesures — ne sont en aucun cas transmises à Google, à AdMob ou à d'autres réseaux publicitaires, ni utilisées pour personnaliser les annonces. Aucune des requêtes publicitaires ne contient d'informations sur votre cycle ou votre santé : votre journal, vos symptômes et vos dates ne quittent pas l'appareil.</p>
+    <p>À la première ouverture de l'application, si vous vous trouvez dans l'Espace économique européen, au Royaume-Uni ou en Suisse, un formulaire de consentement conforme au Transparency and Consent Framework de IAB Europe vous est présenté, géré via la User Messaging Platform de Google. Depuis ce formulaire, vous pouvez consentir aux annonces personnalisées, refuser le consentement (vous continuerez à voir des annonces non personnalisées), ou gérer en détail les finalités et fournisseurs individuels.</p>
+    <p>Aucun des quatre formats n'est sollicité avant que votre consentement n'ait été déterminé. Selon la configuration du formulaire de consentement, certaines finalités publicitaires peuvent reposer sur votre consentement explicite, d'autres sur l'intérêt légitime de Google et de ses partenaires : le formulaire indique toujours, pour chaque finalité, quelle base s'applique et vous permet de gérer vos préférences.</p>
     <p>Vous pouvez modifier votre choix à tout moment depuis <strong>Paramètres de confidentialité</strong>, dans la section Paramètres de l'application.</p>
     <p>Pour en savoir plus : <a href="https://policies.google.com/privacy">Politique de confidentialité de Google</a> et <a href="https://policies.google.com/technologies/partner-sites">Comment Google utilise les données des sites et applications de ses partenaires</a>.</p>
 
@@ -914,10 +947,10 @@
     <h2><span class="n">6</span>Bases juridiques du traitement</h2>
     <table>
       <tr><th>Traitement</th><th>Base juridique</th></tr>
-      <tr><td>Données de cycle, symptômes, santé et journal enregistrées localement</td><td>Votre consentement explicite, art. 9.2.a RGPD, manifesté par la saisie volontaire des données dans l'application.</td></tr>
+      <tr><td>Données de cycle, symptômes, santé et journal enregistrées localement</td><td>Votre consentement explicite, art. 9.2.a RGPD. Avant de pouvoir saisir toute donnée de cycle, l'application vous présente un écran dédié expliquant qu'il s'agit de données relatives à votre santé qui restent uniquement sur l'appareil ; vous pouvez consulter cette information depuis cet écran, et ce n'est qu'en confirmant par une action explicite (« Compris, continuer ») que vous pouvez poursuivre. La date et l'heure de cette confirmation sont enregistrées sur votre appareil, à votre disposition comme preuve du consentement donné.</td></tr>
       <tr><td>Fonctionnement des fonctions de base de l'application</td><td>Exécution du service que vous demandez, art. 6.1.b RGPD.</td></tr>
       <tr><td>Annonces personnalisées et finalités de mesure associées</td><td>Votre consentement, art. 6.1.a RGPD, recueilli via le formulaire décrit au point 3.4 et révocable à tout moment.</td></tr>
-      <tr><td>Annonces non personnalisées et sécurité technique des annonces</td><td>Intérêt légitime à la durabilité économique et au bon fonctionnement du service, art. 6.1.f RGPD, dans les limites autorisées par les politiques de Google.</td></tr>
+      <tr><td>Annonces non personnalisées et sécurité technique des annonces</td><td>Selon la configuration du formulaire de consentement : votre consentement, art. 6.1.a RGPD, ou intérêt légitime à la durabilité économique du service, art. 6.1.f RGPD. Le formulaire indique quelle base s'applique à chaque finalité.</td></tr>
     </table>
     <p>La fourniture de données de santé est entièrement facultative : vous pouvez utiliser l'application en ne saisissant que les informations que vous souhaitez.</p>
   </div>
@@ -932,7 +965,7 @@
   <div class="card">
     <h2><span class="n">8</span>Transferts vers des pays tiers</h2>
     <p>Nous ne transférons vos données vers aucun pays, car nous ne les recevons jamais.</p>
-    <p>Google, en tant que fournisseur publicitaire, peut traiter les données techniques indiquées au point 3.4 également en dehors de l'Espace économique européen, notamment aux États-Unis, sur la base des garanties prévues au Chapitre V du RGPD : clauses contractuelles types de la Commission européenne et/ou le cadre de protection des données UE-États-Unis. Les détails sont disponibles dans la politique de Google.</p>
+    <p>Google, en tant que fournisseur publicitaire, peut traiter les données techniques indiquées au point 3.4 également en dehors de l'Espace économique européen, notamment aux États-Unis, sur la base des mécanismes de transfert indiqués par Google au cas par cas, tels que les clauses contractuelles types de la Commission européenne et/ou le cadre de protection des données UE-États-Unis. Les détails à jour sont disponibles dans la politique de Google.</p>
   </div>
 
   <div class="card">
