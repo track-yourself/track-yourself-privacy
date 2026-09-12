@@ -61,6 +61,8 @@
   footer{text-align:center;color:var(--muted);font-size:13px;margin-top:32px}
   [data-lang]{display:none}
   [data-lang].show{display:block}
+  [dir=rtl] ul{margin:0 20px 12px 0}
+  [dir=rtl] th,[dir=rtl] td{text-align:right}
 </style>
 </head>
 <body>
@@ -73,11 +75,13 @@
   <div class="sub" data-lang="de">Datenschutzerklärung</div>
   <div class="sub" data-lang="es">Política de privacidad</div>
   <div class="sub" data-lang="fr">Politique de confidentialité</div>
-  <div class="date" data-lang="it">Ultimo aggiornamento: 4 settembre 2026</div>
-  <div class="date" data-lang="en">Last updated: 4 September 2026</div>
-  <div class="date" data-lang="de">Letzte Aktualisierung: 4. September 2026</div>
-  <div class="date" data-lang="es">Última actualización: 4 de septiembre de 2026</div>
-  <div class="date" data-lang="fr">Dernière mise à jour : 4 septembre 2026</div>
+  <div class="date" data-lang="it">Ultimo aggiornamento: 13 settembre 2026</div>
+  <div class="date" data-lang="en">Last updated: 13 September 2026</div>
+  <div class="sub" data-lang="ar" dir="rtl">سياسة الخصوصية</div>
+  <div class="date" data-lang="de">Letzte Aktualisierung: 13. September 2026</div>
+  <div class="date" data-lang="es">Última actualización: 13 de septiembre de 2026</div>
+  <div class="date" data-lang="fr">Dernière mise à jour : 13 septembre 2026</div>
+  <div class="date" data-lang="ar" dir="rtl">آخر تحديث: 13 سبتمبر 2026</div>
 </header>
 
 <div class="langs">
@@ -86,6 +90,7 @@
   <button id="btn-de" onclick="setLang('de')">Deutsch</button>
   <button id="btn-es" onclick="setLang('es')">Español</button>
   <button id="btn-fr" onclick="setLang('fr')">Français</button>
+  <button id="btn-ar" onclick="setLang('ar')">العربية</button>
 </div>
 
 <!-- ============================== ITALIANO ============================== -->
@@ -114,7 +119,7 @@
 
   <div class="card">
     <h2><span class="n">2</span>Ambito di applicazione</h2>
-    <p>Questa informativa riguarda l'applicazione mobile Track Yourself, dedicata al monitoraggio del ciclo mestruale, dell'ovulazione, della fertilità e del benessere personale.</p>
+    <p>Questa informativa riguarda l'applicazione mobile Track Yourself, dedicata al monitoraggio del ciclo mestruale, dell'ovulazione e della fertilità.</p>
     <p>L'app non richiede la creazione di un account e non chiede indirizzo email, numero di telefono o credenziali di accesso per funzionare.</p>
   </div>
 
@@ -126,14 +131,15 @@
     <ul>
       <li>date delle mestruazioni, durata e intensità del flusso, cicli registrati e previsioni;</li>
       <li>ovulazione e finestra fertile;</li>
-      <li>sintomi (anche personalizzati), umore, benessere;</li>
-      <li>misurazioni come peso, altezza, circonferenze corporee e temperatura basale;</li>
-      <li>assunzione della pillola o di farmaci e relativi promemoria;</li>
+      <li>sintomi (anche personalizzati) e umore;</li>
+      <li>rapporti, protetti o non protetti;</li>
+      <li>misurazioni come peso, altezza, circonferenze corporee, acqua bevuta e temperatura basale;</li>
       <li>note del diario personale;</li>
       <li>i dati di profilo che decidi di inserire, come nome, età e data di nascita;</li>
       <li>l'immagine del profilo, se scegli di impostarla;</li>
       <li>impostazioni dell'app: lingua, tema, PIN, preferenza di sblocco biometrico, promemoria attivi e relativi orari.</li>
     </ul>
+    <p>Se hai usato versioni precedenti dell'app, gli eventuali dati già registrati su pillola, farmaci e integratori, sonno, stress e ansia restano salvati sul tuo dispositivo e nel file di backup, anche se queste funzioni non sono più disponibili nell'app. Non vengono mostrati né trasmessi e li elimini con gli stessi strumenti indicati al punto 7.</p>
     <p>Queste informazioni non vengono trasmesse a noi né a terzi. Non transitano su alcun server, non vengono caricate in cloud da parte nostra e non vengono trasmesse ai nostri server né caricate automaticamente su servizi cloud da noi gestiti.</p>
     <p>Parte di queste informazioni costituisce dati relativi alla salute, appartenenti alle categorie particolari di dati di cui all'art. 9 GDPR. È esattamente per questo che l'app è progettata per conservarli localmente, sotto il tuo controllo esclusivo.</p>
     <p>Per proteggerli ulteriormente, i dati salvati tramite Hive sono cifrati con AES-256: la chiave di cifratura viene generata sul dispositivo e conservata nel sistema di archiviazione sicura del sistema operativo (Android Keystore), mai su disco in chiaro.</p>
@@ -154,8 +160,8 @@
     <ul>
       <li><strong>Banner</strong>: un riquadro pubblicitario visibile in una porzione della schermata principale.</li>
       <li><strong>Annunci all'apertura</strong>: mostrati occasionalmente quando apri l'app.</li>
-      <li><strong>Annunci a schermo intero (interstitial)</strong>: mostrati in alcuni punti di passaggio tra una schermata di sola consultazione e un'altra, ad esempio uscendo dall'Analisi del ciclo, dalla Cronologia o dalle Domande frequenti. Non vengono mai mostrati mentre stai registrando dati o scrivendo nel diario.</li>
-      <li><strong>Video con ricompensa</strong>: un formato che scegli tu volontariamente di attivare. Guardando un video pubblicitario per intero, ricevi alcune ore senza alcuna pubblicità nell'app; puoi ripetere la visione per prolungare il periodo.</li>
+      <li><strong>Annunci a schermo intero (interstitial)</strong>: mostrati in alcuni punti di passaggio tra una schermata di sola consultazione e un'altra, ad esempio uscendo dall'Analisi del ciclo, dalla Cronologia, dall'Esportazione dei dati o dalle Domande frequenti. Non vengono mai mostrati mentre stai registrando dati o scrivendo nel diario.</li>
+      <li><strong>Video con ricompensa</strong>: un formato che scegli tu volontariamente di attivare. Guardando un video pubblicitario per intero, ricevi 12 ore senza alcuna pubblicità nell'app; puoi ripetere la visione per prolungare il periodo.</li>
     </ul>
     <p>Per erogare questi annunci, Google si avvale di una rete di partner pubblicitari terzi, il cui elenco aggiornato è consultabile all'interno del modulo di consenso descritto poco sotto. Google e questi partner possono trattare informazioni tecniche quali:</p>
     <ul>
@@ -176,13 +182,16 @@
 
     <h3>3.5 Nessuna statistica di utilizzo</h3>
     <p>L'app non integra strumenti di analytics, di tracciamento comportamentale o di segnalazione automatica dei crash (come Google Analytics o Firebase Crashlytics). Non raccogliamo statistiche sul tuo utilizzo dell'app.</p>
+
+    <h3>3.6 Controllo degli aggiornamenti</h3>
+    <p>L'app usa il servizio In-App Updates di Google Play per verificare se è disponibile una nuova versione e, in quel caso, mostrarti un avviso. La verifica è gestita dall'app Google Play Store installata sul dispositivo, secondo le condizioni e l'informativa di Google Play. In questa operazione non viene inviato alcun dato che hai inserito nell'app.</p>
   </div>
 
   <div class="card">
     <h2><span class="n">4</span>Autorizzazioni richieste</h2>
     <table>
       <tr><th>Autorizzazione</th><th>Perché serve</th></tr>
-      <tr><td>Notifiche</td><td>Mostrare promemoria per ciclo, ovulazione, giorni fertili, pillola, registrazione giornaliera e umore. Le notifiche sono generate localmente sul dispositivo.</td></tr>
+      <tr><td>Notifiche</td><td>Mostrare promemoria per ciclo, ovulazione, giorni fertili, registrazione giornaliera, umore e sintomi, e un promemoria se non registri nulla da un po'. Le notifiche sono generate localmente sul dispositivo.</td></tr>
       <tr><td>Galleria / fotocamera</td><td>Solo se scegli di impostare un'immagine del profilo. L'immagine resta sul dispositivo.</td></tr>
       <tr><td>Accesso ai file</td><td>Solo quando crei o ripristini un backup, per scrivere o leggere il file che scegli tu.</td></tr>
       <tr><td>Biometria / blocco schermo</td><td>Solo per proteggere l'accesso all'app con impronta, volto o PIN. Il dato biometrico è gestito dal sistema operativo e non è mai accessibile all'app.</td></tr>
@@ -197,7 +206,7 @@
     <p>L'app consente di esportare i tuoi dati in formato PDF o CSV e di condividerli tramite le funzioni del tuo dispositivo, ad esempio email, messaggistica o un tuo spazio cloud personale. Sono file pensati per essere letti, ad esempio da portare al medico.</p>
 
     <h3>5.2 Backup e ripristino</h3>
-    <p>L'app consente inoltre di creare un file di backup che contiene tutti i dati registrati: cicli, sintomi, benessere, note del diario, misurazioni, medicine e impostazioni. Il file viene creato sul dispositivo e ti viene proposto tramite il menu di condivisione del sistema operativo: sei tu a scegliere dove conservarlo, ad esempio nella memoria del telefono, in un tuo spazio cloud personale o inviandolo a te stessa.</p>
+    <p>L'app consente inoltre di creare un file di backup che contiene tutti i dati registrati: cicli, sintomi, umore, note del diario, misurazioni, impostazioni ed eventuali dati registrati con versioni precedenti dell'app (ad esempio medicine). Il file viene creato sul dispositivo e ti viene proposto tramite il menu di condivisione del sistema operativo: sei tu a scegliere dove conservarlo, ad esempio nella memoria del telefono, in un tuo spazio cloud personale o inviandolo a te stessa.</p>
     <p>Il file di backup non ci viene trasmesso, non transita da nostri server e non ne conserviamo alcuna copia. La funzione Ripristina backup legge un file che selezioni tu e sostituisce i dati presenti nell'app.</p>
 
     <div class="note">
@@ -303,7 +312,7 @@
 
   <div class="card">
     <h2><span class="n">2</span>Scope</h2>
-    <p>This policy covers the Track Yourself mobile application, used to track the menstrual cycle, ovulation, fertility and personal wellbeing. The app requires no account and asks for no email address, phone number or login credentials in order to work.</p>
+    <p>This policy covers the Track Yourself mobile application, used to track the menstrual cycle, ovulation and fertility. The app requires no account and asks for no email address, phone number or login credentials in order to work.</p>
   </div>
 
   <div class="card">
@@ -314,14 +323,15 @@
     <ul>
       <li>period dates, flow duration and intensity, logged cycles and predictions;</li>
       <li>ovulation and fertile window;</li>
-      <li>symptoms (including custom ones), mood and wellbeing;</li>
-      <li>measurements such as weight, height, body measurements and basal temperature;</li>
-      <li>contraceptive pill or medication intake and reminders;</li>
+      <li>symptoms (including custom ones) and mood;</li>
+      <li>intimacy, protected or unprotected;</li>
+      <li>measurements such as weight, height, body measurements, water intake and basal temperature;</li>
       <li>personal journal notes;</li>
       <li>the profile details you choose to enter, such as name, age and date of birth;</li>
       <li>your profile picture, if you choose to set one;</li>
       <li>app settings: language, theme, PIN, biometric unlock preference, active reminders and their times.</li>
     </ul>
+    <p>If you used earlier versions of the app, any data you already logged about the contraceptive pill, medication and supplements, sleep, stress or anxiety remains stored on your device and in your backup file, even though these features are no longer available in the app. It is not displayed or transmitted, and you can delete it with the same tools described in section 7.</p>
     <p>This information is never transmitted to us or to third parties. It passes through no server, is not uploaded to any cloud service by us, and is not transmitted to our servers nor automatically uploaded to any cloud service we manage.</p>
     <p>Some of this information constitutes health data, a special category of personal data under Article 9 GDPR. That is precisely why the app is designed to keep it local and under your sole control.</p>
     <p>For further protection, data saved through Hive is encrypted with AES-256: the encryption key is generated on the device and kept in the operating system's secure storage (Android Keystore), never on disk in plain form.</p>
@@ -342,8 +352,8 @@
     <ul>
       <li><strong>Banner</strong>: an ad box visible in part of the main screen.</li>
       <li><strong>App-open ads</strong>: shown occasionally when you open the app.</li>
-      <li><strong>Full-screen ads (interstitial)</strong>: shown at certain transition points between browsing screens, for example when leaving Cycle Analysis, History, or the FAQ. Never shown while you are logging data or writing in the journal.</li>
-      <li><strong>Rewarded video</strong>: a format you choose to activate voluntarily. Watching a full advertising video gives you a few hours with no ads in the app; you can watch again to extend the period.</li>
+      <li><strong>Full-screen ads (interstitial)</strong>: shown at certain transition points between browsing screens, for example when leaving Cycle Analysis, History, Data export or the FAQ. Never shown while you are logging data or writing in the journal.</li>
+      <li><strong>Rewarded video</strong>: a format you choose to activate voluntarily. Watching a full advertising video gives you 12 hours with no ads in the app; you can watch again to extend the period.</li>
     </ul>
     <p>To serve these ads, Google relies on a network of third-party advertising partners, whose up-to-date list is available within the consent form described below. Google and these partners may process technical information such as:</p>
     <ul>
@@ -359,13 +369,16 @@
 
     <h3>3.5 No usage analytics</h3>
     <p>The app includes no analytics, behavioural tracking or automated crash reporting SDK (such as Google Analytics or Firebase Crashlytics). We collect no statistics about your use of the app.</p>
+
+    <h3>3.6 Update check</h3>
+    <p>The app uses Google Play's In-App Updates service to check whether a new version is available and, if so, to show you a notice. The check is handled by the Google Play Store app installed on your device, under Google Play's terms and privacy policy. No data you have entered in the app is sent as part of this check.</p>
   </div>
 
   <div class="card">
     <h2><span class="n">4</span>Permissions</h2>
     <table>
       <tr><th>Permission</th><th>Why it is needed</th></tr>
-      <tr><td>Notifications</td><td>To show reminders for your cycle, ovulation, fertile days, pill, daily logging and mood. Notifications are generated locally on the device.</td></tr>
+      <tr><td>Notifications</td><td>To show reminders for your cycle, ovulation, fertile days, daily logging, mood and symptoms, and a reminder if you have not logged anything for a while. Notifications are generated locally on the device.</td></tr>
       <tr><td>Photos / camera</td><td>Only if you choose to set a profile picture. The image stays on the device.</td></tr>
       <tr><td>File access</td><td>Only when you create or restore a backup, to write or read the file you choose.</td></tr>
       <tr><td>Biometrics / device lock</td><td>Only to protect access to the app with fingerprint, face or PIN. Biometric data is handled by the operating system and is never accessible to the app.</td></tr>
@@ -380,7 +393,7 @@
     <p>The app lets you export your data as PDF or CSV and share it using your device's features, such as email, messaging or your own cloud storage. These files are meant to be read, for example to bring to a doctor.</p>
 
     <h3>5.2 Backup and restore</h3>
-    <p>The app also lets you create a backup file containing all the data you have logged: cycles, symptoms, wellbeing, journal notes, measurements, medication and settings. The file is created on your device and offered to you through the operating system's share menu: you choose where to keep it, for example in your phone's storage, in your own cloud space, or by sending it to yourself.</p>
+    <p>The app also lets you create a backup file containing all the data you have logged: cycles, symptoms, mood, journal notes, measurements, settings and any data logged with earlier versions of the app (for example medication). The file is created on your device and offered to you through the operating system's share menu: you choose where to keep it, for example in your phone's storage, in your own cloud space, or by sending it to yourself.</p>
     <p>The backup file is never transmitted to us, passes through none of our servers, and we keep no copy of it. The Restore backup function reads a file that you select and replaces the data currently in the app.</p>
 
     <div class="note">
@@ -487,7 +500,7 @@
 
   <div class="card">
     <h2><span class="n">2</span>Anwendungsbereich</h2>
-    <p>Diese Erklärung betrifft die mobile Anwendung Track Yourself, die dem Monitoring des Menstruationszyklus, des Eisprungs, der Fruchtbarkeit und des persönlichen Wohlbefindens dient.</p>
+    <p>Diese Erklärung betrifft die mobile Anwendung Track Yourself, die dem Monitoring des Menstruationszyklus, des Eisprungs und der Fruchtbarkeit dient.</p>
     <p>Die App erfordert keine Kontoerstellung und fragt weder nach E-Mail-Adresse noch Telefonnummer noch Zugangsdaten, um zu funktionieren.</p>
   </div>
 
@@ -499,14 +512,15 @@
     <ul>
       <li>Daten der Menstruation, Dauer und Intensität des Flusses, erfasste Zyklen und Vorhersagen;</li>
       <li>Eisprung und fruchtbares Fenster;</li>
-      <li>Symptome (auch benutzerdefinierte), Stimmung, Wohlbefinden;</li>
-      <li>Messungen wie Gewicht, Größe, Körpermaße und Basaltemperatur;</li>
-      <li>Einnahme der Pille oder von Medikamenten sowie zugehörige Erinnerungen;</li>
+      <li>Symptome (auch benutzerdefinierte) und Stimmung;</li>
+      <li>Geschlechtsverkehr, geschützt oder ungeschützt;</li>
+      <li>Messungen wie Gewicht, Größe, Körpermaße, getrunkenes Wasser und Basaltemperatur;</li>
       <li>persönliche Tagebuchnotizen;</li>
       <li>die Profildaten, die du eingibst, wie Name, Alter und Geburtsdatum;</li>
       <li>das Profilbild, falls du eines festlegst;</li>
       <li>App-Einstellungen: Sprache, Design, PIN, biometrische Entsperrpräferenz, aktive Erinnerungen und deren Zeiten.</li>
     </ul>
+    <p>Wenn du frühere Versionen der App genutzt hast, bleiben bereits erfasste Daten zu Pille, Medikamenten und Nahrungsergänzungsmitteln, Schlaf, Stress oder Angst auf deinem Gerät und in deiner Sicherungsdatei gespeichert, auch wenn diese Funktionen in der App nicht mehr verfügbar sind. Sie werden weder angezeigt noch übermittelt, und du kannst sie mit den in Punkt 7 beschriebenen Mitteln löschen.</p>
     <p>Diese Informationen werden weder an uns noch an Dritte übermittelt. Sie durchlaufen keinen Server, werden nicht von uns in die Cloud hochgeladen und werden nicht an unsere Server übermittelt und nicht automatisch in einen von uns verwalteten Cloud-Dienst hochgeladen.</p>
     <p>Ein Teil dieser Informationen stellt Gesundheitsdaten dar, die zu den besonderen Kategorien personenbezogener Daten gemäß Art. 9 DSGVO gehören. Genau deshalb ist die App so konzipiert, dass sie diese Daten lokal und unter deiner alleinigen Kontrolle speichert.</p>
     <p>Zum weiteren Schutz werden die über Hive gespeicherten Daten mit AES-256 verschlüsselt: Der Verschlüsselungsschlüssel wird auf dem Gerät erzeugt und im sicheren Speicher des Betriebssystems (Android Keystore) aufbewahrt, niemals unverschlüsselt auf der Festplatte.</p>
@@ -527,8 +541,8 @@
     <ul>
       <li><strong>Banner</strong>: ein Werbefeld, das in einem Teil des Hauptbildschirms sichtbar ist.</li>
       <li><strong>Anzeigen beim Öffnen</strong>: gelegentlich angezeigt, wenn du die App öffnest.</li>
-      <li><strong>Vollbildanzeigen (Interstitial)</strong>: an bestimmten Übergangspunkten zwischen reinen Ansichtsbildschirmen angezeigt, zum Beispiel beim Verlassen der Zyklusanalyse, des Verlaufs oder der häufig gestellten Fragen. Werden niemals angezeigt, während du Daten erfasst oder im Tagebuch schreibst.</li>
-      <li><strong>Belohnungsvideo</strong>: ein Format, das du freiwillig aktivierst. Wenn du ein vollständiges Werbevideo ansiehst, erhältst du einige Stunden ohne Werbung in der App; du kannst es erneut ansehen, um den Zeitraum zu verlängern.</li>
+      <li><strong>Vollbildanzeigen (Interstitial)</strong>: an bestimmten Übergangspunkten zwischen reinen Ansichtsbildschirmen angezeigt, zum Beispiel beim Verlassen der Zyklusanalyse, des Verlaufs, des Datenexports oder der häufig gestellten Fragen. Werden niemals angezeigt, während du Daten erfasst oder im Tagebuch schreibst.</li>
+      <li><strong>Belohnungsvideo</strong>: ein Format, das du freiwillig aktivierst. Wenn du ein vollständiges Werbevideo ansiehst, erhältst du 12 Stunden ohne Werbung in der App; du kannst es erneut ansehen, um den Zeitraum zu verlängern.</li>
     </ul>
     <p>Um diese Anzeigen bereitzustellen, greift Google auf ein Netzwerk von Drittanbieter-Werbepartnern zurück, deren aktuelle Liste im weiter unten beschriebenen Einwilligungsformular einsehbar ist. Google und diese Partner können technische Informationen verarbeiten wie:</p>
     <ul>
@@ -544,13 +558,16 @@
 
     <h3>3.5 Keine Nutzungsstatistiken</h3>
     <p>Die App enthält keine Analytics-, Verhaltensverfolgungs- oder automatischen Absturzberichtstools (wie Google Analytics oder Firebase Crashlytics). Wir sammeln keine Statistiken über deine Nutzung der App.</p>
+
+    <h3>3.6 Prüfung auf Updates</h3>
+    <p>Die App nutzt den Dienst In-App Updates von Google Play, um zu prüfen, ob eine neue Version verfügbar ist, und dir in diesem Fall einen Hinweis anzuzeigen. Die Prüfung erfolgt über die auf deinem Gerät installierte Google Play Store-App, gemäß den Bedingungen und der Datenschutzerklärung von Google Play. Dabei werden keine Daten übermittelt, die du in der App eingegeben hast.</p>
   </div>
 
   <div class="card">
     <h2><span class="n">4</span>Erforderliche Berechtigungen</h2>
     <table>
       <tr><th>Berechtigung</th><th>Warum sie benötigt wird</th></tr>
-      <tr><td>Benachrichtigungen</td><td>Erinnerungen für Zyklus, Eisprung, fruchtbare Tage, Pille, tägliche Erfassung und Stimmung anzeigen. Benachrichtigungen werden lokal auf dem Gerät erzeugt.</td></tr>
+      <tr><td>Benachrichtigungen</td><td>Erinnerungen für Zyklus, Eisprung, fruchtbare Tage, tägliche Erfassung, Stimmung und Symptome sowie eine Erinnerung, wenn du länger nichts erfasst hast, anzeigen. Benachrichtigungen werden lokal auf dem Gerät erzeugt.</td></tr>
       <tr><td>Galerie / Kamera</td><td>Nur wenn du ein Profilbild festlegst. Das Bild bleibt auf dem Gerät.</td></tr>
       <tr><td>Dateizugriff</td><td>Nur beim Erstellen oder Wiederherstellen eines Backups, um die von dir gewählte Datei zu schreiben oder zu lesen.</td></tr>
       <tr><td>Biometrie / Bildschirmsperre</td><td>Nur zum Schutz des App-Zugriffs mit Fingerabdruck, Gesicht oder PIN. Biometrische Daten werden vom Betriebssystem verwaltet und sind der App niemals zugänglich.</td></tr>
@@ -565,7 +582,7 @@
     <p>Die App ermöglicht den Export deiner Daten im PDF- oder CSV-Format und das Teilen über die Funktionen deines Geräts, zum Beispiel E-Mail, Nachrichten oder einen eigenen Cloud-Speicher. Diese Dateien sind zum Lesen gedacht, zum Beispiel um sie zum Arzt mitzunehmen.</p>
 
     <h3>5.2 Backup und Wiederherstellung</h3>
-    <p>Die App ermöglicht außerdem die Erstellung einer Sicherungsdatei mit allen erfassten Daten: Zyklen, Symptome, Wohlbefinden, Tagebuchnotizen, Messungen, Medikamente und Einstellungen. Die Datei wird auf dem Gerät erstellt und dir über das Teilen-Menü des Betriebssystems angeboten: Du entscheidest, wo du sie aufbewahrst, zum Beispiel im Speicher des Telefons, in einem eigenen Cloud-Bereich oder durch Versenden an dich selbst.</p>
+    <p>Die App ermöglicht außerdem die Erstellung einer Sicherungsdatei mit allen erfassten Daten: Zyklen, Symptome, Stimmung, Tagebuchnotizen, Messungen, Einstellungen sowie eventuell mit früheren Versionen der App erfasste Daten (zum Beispiel Medikamente). Die Datei wird auf dem Gerät erstellt und dir über das Teilen-Menü des Betriebssystems angeboten: Du entscheidest, wo du sie aufbewahrst, zum Beispiel im Speicher des Telefons, in einem eigenen Cloud-Bereich oder durch Versenden an dich selbst.</p>
     <p>Die Sicherungsdatei wird uns nie übermittelt, durchläuft keinen unserer Server, und wir behalten keine Kopie davon. Die Funktion Backup wiederherstellen liest eine von dir ausgewählte Datei und ersetzt die aktuell in der App vorhandenen Daten.</p>
 
     <div class="note">
@@ -672,7 +689,7 @@
 
   <div class="card">
     <h2><span class="n">2</span>Ámbito de aplicación</h2>
-    <p>Esta política se refiere a la aplicación móvil Track Yourself, dedicada al seguimiento del ciclo menstrual, la ovulación, la fertilidad y el bienestar personal.</p>
+    <p>Esta política se refiere a la aplicación móvil Track Yourself, dedicada al seguimiento del ciclo menstrual, la ovulación y la fertilidad.</p>
     <p>La app no requiere la creación de una cuenta y no pide dirección de correo electrónico, número de teléfono ni credenciales de acceso para funcionar.</p>
   </div>
 
@@ -684,14 +701,15 @@
     <ul>
       <li>fechas de la menstruación, duración e intensidad del flujo, ciclos registrados y predicciones;</li>
       <li>ovulación y ventana fértil;</li>
-      <li>síntomas (incluidos los personalizados), estado de ánimo, bienestar;</li>
-      <li>mediciones como peso, altura, medidas corporales y temperatura basal;</li>
-      <li>toma de la píldora o de medicamentos y sus recordatorios;</li>
+      <li>síntomas (incluidos los personalizados) y estado de ánimo;</li>
+      <li>relaciones sexuales, con o sin protección;</li>
+      <li>mediciones como peso, altura, medidas corporales, agua bebida y temperatura basal;</li>
       <li>notas del diario personal;</li>
       <li>los datos de perfil que decides introducir, como nombre, edad y fecha de nacimiento;</li>
       <li>la imagen de perfil, si eliges establecerla;</li>
       <li>ajustes de la app: idioma, tema, PIN, preferencia de desbloqueo biométrico, recordatorios activos y sus horarios.</li>
     </ul>
+    <p>Si has usado versiones anteriores de la app, los datos que ya hubieras registrado sobre la píldora, medicamentos y suplementos, sueño, estrés o ansiedad siguen guardados en tu dispositivo y en tu archivo de copia de seguridad, aunque estas funciones ya no estén disponibles en la app. No se muestran ni se transmiten, y puedes eliminarlos con los mismos medios indicados en el punto 7.</p>
     <p>Esta información no se transmite ni a nosotros ni a terceros. No pasa por ningún servidor, no se sube a la nube por nuestra parte y no se transmite a nuestros servidores ni se sube automáticamente a ningún servicio en la nube gestionado por nosotros.</p>
     <p>Parte de esta información constituye datos relativos a la salud, pertenecientes a las categorías especiales de datos del art. 9 RGPD. Es precisamente por eso que la app está diseñada para conservarlos localmente, bajo tu control exclusivo.</p>
     <p>Para mayor protección, los datos guardados mediante Hive están cifrados con AES-256: la clave de cifrado se genera en el dispositivo y se conserva en el almacenamiento seguro del sistema operativo (Android Keystore), nunca en el disco en forma legible.</p>
@@ -712,8 +730,8 @@
     <ul>
       <li><strong>Banner</strong>: un recuadro publicitario visible en una parte de la pantalla principal.</li>
       <li><strong>Anuncios al abrir</strong>: se muestran ocasionalmente al abrir la app.</li>
-      <li><strong>Anuncios a pantalla completa (interstitial)</strong>: se muestran en ciertos puntos de transición entre pantallas de solo consulta, por ejemplo al salir del Análisis del ciclo, del Historial o de las Preguntas frecuentes. Nunca se muestran mientras registras datos o escribes en el diario.</li>
-      <li><strong>Vídeo con recompensa</strong>: un formato que tú eliges activar voluntariamente. Al ver un vídeo publicitario completo, recibes unas horas sin publicidad en la app; puedes repetir la visualización para prolongar el periodo.</li>
+      <li><strong>Anuncios a pantalla completa (interstitial)</strong>: se muestran en ciertos puntos de transición entre pantallas de solo consulta, por ejemplo al salir del Análisis del ciclo, del Historial, de la Exportación de datos o de las Preguntas frecuentes. Nunca se muestran mientras registras datos o escribes en el diario.</li>
+      <li><strong>Vídeo con recompensa</strong>: un formato que tú eliges activar voluntariamente. Al ver un vídeo publicitario completo, recibes 12 horas sin publicidad en la app; puedes repetir la visualización para prolongar el periodo.</li>
     </ul>
     <p>Para servir estos anuncios, Google recurre a una red de socios publicitarios externos, cuya lista actualizada puede consultarse en el formulario de consentimiento descrito más abajo. Google y estos socios pueden tratar información técnica como:</p>
     <ul>
@@ -729,13 +747,16 @@
 
     <h3>3.5 Ninguna estadística de uso</h3>
     <p>La app no integra herramientas de analítica, seguimiento del comportamiento ni notificación automática de fallos (como Google Analytics o Firebase Crashlytics). No recopilamos estadísticas sobre tu uso de la app.</p>
+
+    <h3>3.6 Comprobación de actualizaciones</h3>
+    <p>La app utiliza el servicio In-App Updates de Google Play para comprobar si hay una nueva versión disponible y, en ese caso, mostrarte un aviso. La comprobación la gestiona la app Google Play Store instalada en tu dispositivo, según las condiciones y la política de privacidad de Google Play. En esta operación no se envía ningún dato que hayas introducido en la app.</p>
   </div>
 
   <div class="card">
     <h2><span class="n">4</span>Permisos requeridos</h2>
     <table>
       <tr><th>Permiso</th><th>Por qué es necesario</th></tr>
-      <tr><td>Notificaciones</td><td>Mostrar recordatorios de ciclo, ovulación, días fértiles, píldora, registro diario y estado de ánimo. Las notificaciones se generan localmente en el dispositivo.</td></tr>
+      <tr><td>Notificaciones</td><td>Mostrar recordatorios de ciclo, ovulación, días fértiles, registro diario, estado de ánimo y síntomas, y un recordatorio si llevas un tiempo sin registrar nada. Las notificaciones se generan localmente en el dispositivo.</td></tr>
       <tr><td>Galería / cámara</td><td>Solo si eliges establecer una imagen de perfil. La imagen permanece en el dispositivo.</td></tr>
       <tr><td>Acceso a archivos</td><td>Solo al crear o restaurar una copia de seguridad, para escribir o leer el archivo que tú elijas.</td></tr>
       <tr><td>Biometría / bloqueo de pantalla</td><td>Solo para proteger el acceso a la app con huella, rostro o PIN. El dato biométrico lo gestiona el sistema operativo y nunca es accesible para la app.</td></tr>
@@ -750,7 +771,7 @@
     <p>La app permite exportar tus datos en formato PDF o CSV y compartirlos mediante las funciones de tu dispositivo, por ejemplo correo electrónico, mensajería o tu propio espacio en la nube. Son archivos pensados para ser leídos, por ejemplo para llevarlos al médico.</p>
 
     <h3>5.2 Copia de seguridad y restauración</h3>
-    <p>La app también permite crear un archivo de copia de seguridad que contiene todos los datos registrados: ciclos, síntomas, bienestar, notas del diario, mediciones, medicamentos y ajustes. El archivo se crea en el dispositivo y se te ofrece a través del menú de compartir del sistema operativo: eres tú quien elige dónde conservarlo, por ejemplo en la memoria del teléfono, en tu propio espacio en la nube o enviándotelo a ti misma.</p>
+    <p>La app también permite crear un archivo de copia de seguridad que contiene todos los datos registrados: ciclos, síntomas, estado de ánimo, notas del diario, mediciones, ajustes y los datos que se hayan registrado con versiones anteriores de la app (por ejemplo, medicamentos). El archivo se crea en el dispositivo y se te ofrece a través del menú de compartir del sistema operativo: eres tú quien elige dónde conservarlo, por ejemplo en la memoria del teléfono, en tu propio espacio en la nube o enviándotelo a ti misma.</p>
     <p>El archivo de copia de seguridad nunca se nos transmite, no pasa por ninguno de nuestros servidores, y no conservamos ninguna copia de él. La función Restaurar copia de seguridad lee un archivo que tú seleccionas y sustituye los datos presentes en la app.</p>
 
     <div class="note">
@@ -857,7 +878,7 @@
 
   <div class="card">
     <h2><span class="n">2</span>Champ d'application</h2>
-    <p>Cette politique concerne l'application mobile Track Yourself, dédiée au suivi du cycle menstruel, de l'ovulation, de la fertilité et du bien-être personnel.</p>
+    <p>Cette politique concerne l'application mobile Track Yourself, dédiée au suivi du cycle menstruel, de l'ovulation et de la fertilité.</p>
     <p>L'application ne nécessite pas la création d'un compte et ne demande ni adresse e-mail, ni numéro de téléphone, ni identifiants de connexion pour fonctionner.</p>
   </div>
 
@@ -869,14 +890,15 @@
     <ul>
       <li>dates des règles, durée et intensité du flux, cycles enregistrés et prédictions ;</li>
       <li>ovulation et fenêtre de fertilité ;</li>
-      <li>symptômes (y compris personnalisés), humeur, bien-être ;</li>
-      <li>mesures telles que poids, taille, mensurations corporelles et température basale ;</li>
-      <li>prise de la pilule ou de médicaments et rappels associés ;</li>
+      <li>symptômes (y compris personnalisés) et humeur ;</li>
+      <li>rapports sexuels, protégés ou non ;</li>
+      <li>mesures telles que poids, taille, mensurations corporelles, eau bue et température basale ;</li>
       <li>notes du journal personnel ;</li>
       <li>les données de profil que vous choisissez de saisir, comme le nom, l'âge et la date de naissance ;</li>
       <li>la photo de profil, si vous choisissez d'en définir une ;</li>
       <li>paramètres de l'application : langue, thème, code PIN, préférence de déverrouillage biométrique, rappels actifs et leurs horaires.</li>
     </ul>
+    <p>Si vous avez utilisé des versions précédentes de l'application, les données déjà enregistrées concernant la pilule, les médicaments et compléments alimentaires, le sommeil, le stress ou l'anxiété restent enregistrées sur votre appareil et dans votre fichier de sauvegarde, même si ces fonctions ne sont plus disponibles dans l'application. Elles ne sont ni affichées ni transmises, et vous pouvez les supprimer avec les moyens décrits au point 7.</p>
     <p>Ces informations ne sont jamais transmises ni à nous ni à des tiers. Elles ne transitent par aucun serveur, ne sont pas téléchargées dans le cloud par nos soins et ne sont transmises à nos serveurs ni téléchargées automatiquement vers un service cloud que nous gérons.</p>
     <p>Une partie de ces informations constitue des données de santé, appartenant aux catégories particulières de données au sens de l'art. 9 RGPD. C'est précisément pour cela que l'application est conçue pour les conserver localement, sous votre seul contrôle.</p>
     <p>Pour une protection supplémentaire, les données enregistrées via Hive sont chiffrées avec AES-256 : la clé de chiffrement est générée sur l'appareil et conservée dans le stockage sécurisé du système d'exploitation (Android Keystore), jamais en clair sur le disque.</p>
@@ -897,8 +919,8 @@
     <ul>
       <li><strong>Bannière</strong> : un encart publicitaire visible dans une partie de l'écran principal.</li>
       <li><strong>Annonces à l'ouverture</strong> : affichées occasionnellement lorsque vous ouvrez l'application.</li>
-      <li><strong>Annonces plein écran (interstitial)</strong> : affichées à certains points de transition entre des écrans de simple consultation, par exemple en quittant l'Analyse du cycle, l'Historique ou la Foire aux questions. Jamais affichées pendant que vous saisissez des données ou écrivez dans le journal.</li>
-      <li><strong>Vidéo récompensée</strong> : un format que vous choisissez d'activer volontairement. En regardant une vidéo publicitaire en entier, vous bénéficiez de quelques heures sans publicité dans l'application ; vous pouvez la regarder à nouveau pour prolonger la période.</li>
+      <li><strong>Annonces plein écran (interstitial)</strong> : affichées à certains points de transition entre des écrans de simple consultation, par exemple en quittant l'Analyse du cycle, l'Historique, l'Exportation des données ou la Foire aux questions. Jamais affichées pendant que vous saisissez des données ou écrivez dans le journal.</li>
+      <li><strong>Vidéo récompensée</strong> : un format que vous choisissez d'activer volontairement. En regardant une vidéo publicitaire en entier, vous bénéficiez de 12 heures sans publicité dans l'application ; vous pouvez la regarder à nouveau pour prolonger la période.</li>
     </ul>
     <p>Pour diffuser ces annonces, Google s'appuie sur un réseau de partenaires publicitaires tiers, dont la liste à jour est consultable dans le formulaire de consentement décrit ci-dessous. Google et ces partenaires peuvent traiter des informations techniques telles que :</p>
     <ul>
@@ -914,13 +936,16 @@
 
     <h3>3.5 Aucune statistique d'utilisation</h3>
     <p>L'application n'intègre aucun outil d'analytique, de suivi comportemental ou de rapport automatique de plantage (comme Google Analytics ou Firebase Crashlytics). Nous ne collectons aucune statistique sur votre utilisation de l'application.</p>
+
+    <h3>3.6 Vérification des mises à jour</h3>
+    <p>L'application utilise le service In-App Updates de Google Play pour vérifier si une nouvelle version est disponible et, le cas échéant, vous afficher un avis. La vérification est gérée par l'application Google Play Store installée sur votre appareil, selon les conditions et la politique de confidentialité de Google Play. Aucune donnée que vous avez saisie dans l'application n'est envoyée lors de cette opération.</p>
   </div>
 
   <div class="card">
     <h2><span class="n">4</span>Autorisations requises</h2>
     <table>
       <tr><th>Autorisation</th><th>Pourquoi elle est nécessaire</th></tr>
-      <tr><td>Notifications</td><td>Afficher des rappels pour le cycle, l'ovulation, les jours fertiles, la pilule, la saisie quotidienne et l'humeur. Les notifications sont générées localement sur l'appareil.</td></tr>
+      <tr><td>Notifications</td><td>Afficher des rappels pour le cycle, l'ovulation, les jours fertiles, la saisie quotidienne, l'humeur et les symptômes, ainsi qu'un rappel si vous n'avez rien enregistré depuis un moment. Les notifications sont générées localement sur l'appareil.</td></tr>
       <tr><td>Galerie / appareil photo</td><td>Uniquement si vous choisissez de définir une photo de profil. L'image reste sur l'appareil.</td></tr>
       <tr><td>Accès aux fichiers</td><td>Uniquement lors de la création ou de la restauration d'une sauvegarde, pour écrire ou lire le fichier que vous choisissez.</td></tr>
       <tr><td>Biométrie / verrouillage de l'écran</td><td>Uniquement pour protéger l'accès à l'application par empreinte, visage ou code PIN. La donnée biométrique est gérée par le système d'exploitation et n'est jamais accessible à l'application.</td></tr>
@@ -935,7 +960,7 @@
     <p>L'application permet d'exporter vos données au format PDF ou CSV et de les partager via les fonctions de votre appareil, par exemple e-mail, messagerie ou votre propre espace cloud. Ce sont des fichiers destinés à être lus, par exemple pour les apporter à votre médecin.</p>
 
     <h3>5.2 Sauvegarde et restauration</h3>
-    <p>L'application permet également de créer un fichier de sauvegarde contenant toutes les données enregistrées : cycles, symptômes, bien-être, notes du journal, mesures, médicaments et paramètres. Le fichier est créé sur l'appareil et vous est proposé via le menu de partage du système d'exploitation : c'est vous qui choisissez où le conserver, par exemple dans la mémoire du téléphone, dans votre propre espace cloud ou en vous l'envoyant à vous-même.</p>
+    <p>L'application permet également de créer un fichier de sauvegarde contenant toutes les données enregistrées : cycles, symptômes, humeur, notes du journal, mesures, paramètres et les éventuelles données enregistrées avec des versions précédentes de l'application (par exemple des médicaments). Le fichier est créé sur l'appareil et vous est proposé via le menu de partage du système d'exploitation : c'est vous qui choisissez où le conserver, par exemple dans la mémoire du téléphone, dans votre propre espace cloud ou en vous l'envoyant à vous-même.</p>
     <p>Le fichier de sauvegarde ne nous est jamais transmis, ne transite par aucun de nos serveurs, et nous n'en conservons aucune copie. La fonction Restaurer la sauvegarde lit un fichier que vous sélectionnez et remplace les données présentes dans l'application.</p>
 
     <div class="note">
@@ -1016,6 +1041,200 @@
 
 </div>
 
+<!-- =============================== العربية =============================== -->
+<div data-lang="ar" dir="rtl">
+
+  <div class="card summary">
+    <h2>باختصار</h2>
+    <ul>
+      <li>كل ما تُدخلينه في التطبيق — الدورة والأعراض والقياسات وملاحظات اليوميات — يُحفظ على جهازكِ فقط. لا يوجد لدينا أي خادم ولا حساب ولا نسخة احتياطية عبر الإنترنت.</li>
+      <li>لا نستلم بياناتكِ، لذلك لا يمكننا قراءتها أو بيعها أو مشاركتها.</li>
+      <li>لا تُستخدم بياناتكِ الصحية أبدًا لأغراض إعلانية.</li>
+      <li>مساعد اليوميات يعمل دون اتصال بالإنترنت: إجاباته مكتوبة داخل التطبيق ولا تُرسل رسائلكِ إلى أي أحد.</li>
+      <li>يمكنكِ إنشاء ملف نسخة احتياطية لبياناتكِ والاحتفاظ به حيث تشائين. هذا الملف ملككِ: لا نستلمه ولا نحتفظ بأي نسخة منه.</li>
+      <li>يعرض التطبيق إعلانات عبر Google AdMob بأربعة أشكال. ولهذا الغرض وحده، قد تعالج Google بعض المعلومات التقنية عن الجهاز وفقًا لاختياراتكِ في الموافقة.</li>
+      <li>يؤدي إلغاء تثبيت التطبيق إلى حذف البيانات المحلية وفقًا لما يحدده نظام التشغيل.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">1</span>المسؤول عن معالجة البيانات</h2>
+    <p>المسؤول عن معالجة البيانات بموجب اللائحة الأوروبية (EU) 2016/679 (اللائحة العامة لحماية البيانات "GDPR") هو:</p>
+    <p><strong>Softline Apps</strong> — إيطاليا<br>
+    البريد الإلكتروني للتواصل: <a href="mailto:trackyourself.support@gmail.com">trackyourself.support@gmail.com</a></p>
+    <p>لأي طلب يتعلق ببياناتكِ الشخصية يمكنكِ الكتابة إلى عنوان البريد الإلكتروني المذكور.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">2</span>نطاق التطبيق</h2>
+    <p>تتعلق هذه السياسة بتطبيق الهاتف Track Yourself، المخصص لمتابعة الدورة الشهرية والإباضة والخصوبة.</p>
+    <p>لا يتطلب التطبيق إنشاء حساب، ولا يطلب عنوان بريد إلكتروني أو رقم هاتف أو بيانات دخول ليعمل.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">3</span>ما البيانات التي تتم معالجتها، وأين</h2>
+
+    <h3>3.1 البيانات التي تُدخلينها تبقى على جهازكِ</h3>
+    <p>يُحفظ كل ما تُدخلينه محليًا فقط، في ذاكرة التطبيق على جهازكِ، باستخدام مكتبتي Hive وSharedPreferences. ومن ذلك:</p>
+    <ul>
+      <li>تواريخ الحيض ومدة التدفق وشدته والدورات المسجلة والتوقعات؛</li>
+      <li>الإباضة وفترة الخصوبة؛</li>
+      <li>الأعراض (بما فيها الأعراض الخاصة بكِ) والمزاج؛</li>
+      <li>العلاقة الحميمة، محمية أو غير محمية؛</li>
+      <li>القياسات مثل الوزن والطول ومحيطات الجسم والماء المشروب ودرجة الحرارة القاعدية؛</li>
+      <li>ملاحظات اليوميات الشخصية؛</li>
+      <li>بيانات الملف الشخصي التي تختارين إدخالها، مثل الاسم والعمر وتاريخ الميلاد؛</li>
+      <li>صورة الملف الشخصي، إذا اخترتِ تعيينها؛</li>
+      <li>إعدادات التطبيق: اللغة والمظهر ورمز PIN وتفضيل فتح القفل بالبصمة والتذكيرات المفعّلة وأوقاتها.</li>
+    </ul>
+    <p>إذا كنتِ قد استخدمتِ إصدارات سابقة من التطبيق، فإن أي بيانات سجّلتِها سابقًا عن حبوب منع الحمل أو الأدوية والمكملات أو النوم أو التوتر أو القلق تبقى محفوظة على جهازكِ وفي ملف النسخة الاحتياطية، رغم أن هذه الميزات لم تعد متوفرة في التطبيق. لا تُعرض ولا تُرسل، ويمكنكِ حذفها بالوسائل نفسها المذكورة في البند 7.</p>
+    <p>لا تُرسل هذه المعلومات إلينا ولا إلى أي طرف ثالث. لا تمر عبر أي خادم، ولا نرفعها إلى أي خدمة سحابية، ولا تُرفع تلقائيًا إلى أي خدمة سحابية نديرها.</p>
+    <p>يُعدّ جزء من هذه المعلومات بيانات صحية، وهي من الفئات الخاصة من البيانات المنصوص عليها في المادة 9 من اللائحة العامة لحماية البيانات. ولهذا السبب تحديدًا صُمّم التطبيق ليحفظها محليًا وتحت سيطرتكِ وحدكِ.</p>
+    <p>ولمزيد من الحماية، تُشفَّر البيانات المحفوظة عبر Hive بمعيار AES-256: يُنشأ مفتاح التشفير على الجهاز ويُحفظ في نظام التخزين الآمن لنظام التشغيل (Android Keystore)، ولا يُحفظ أبدًا على القرص بشكل مكشوف.</p>
+
+    <h3>3.2 الإحصاءات وتحليل الدورة</h3>
+    <p>يعالج قسم «تحليل الدورة» البيانات التي سجّلتِها ليعرض لكِ متوسط طول الدورة ومدة الحيض ومدى الانتظام وسجل الدورات.</p>
+    <p>تُجرى هذه الحسابات بالكامل على الجهاز، انطلاقًا من بيانات موجودة محليًا. لا تتم أي معالجة على خوادمنا ولا تُرسل أي بيانات إلى الخارج لإنتاج هذه الإحصاءات.</p>
+    <p>يتيح التطبيق أيضًا تسجيل درجة الحرارة القاعدية. وهو مجرد تسجيل مع رسم بياني وسجل: لا يفسّرها التطبيق، ولا يستخلص منها استنتاجات عن الإباضة، ولا يغيّر توقعاته بناءً عليها.</p>
+
+    <h3>3.3 مساعد اليوميات يعمل دون اتصال بالإنترنت</h3>
+    <p>يتضمن التطبيق مساعدًا للمحادثة في قسم اليوميات. إجاباته محددة مسبقًا ومضمّنة في شيفرة التطبيق: لا تُرسل أي رسالة إلى خوادم خارجية أو خدمات سحابية أو مزوّدي ذكاء اصطناعي من أطراف ثالثة.</p>
+    <p>للإجابة عن بعض الأسئلة، يقرأ المساعد بيانات الدورة المحفوظة مسبقًا على الجهاز، مثل تاريخ الإباضة المتوقع. وتتم هذه القراءة أيضًا محليًا بالكامل.</p>
+    <p>كما أن رسائل المحادثة لا تُحفظ: تبقى في الذاكرة المؤقتة للتطبيق وتُحذف عند إغلاق الشاشة.</p>
+    <p>إجابات المساعد لأغراض معلوماتية فقط ولا تُعدّ استشارة طبية.</p>
+
+    <h3>3.4 البيانات التي تتم معالجتها للإعلانات (Google AdMob)</h3>
+    <p>يعرض التطبيق إعلانات عبر Google AdMob، وهي خدمة تابعة لشركة Google Ireland Limited، بأربعة أشكال:</p>
+    <ul>
+      <li><strong>البانر</strong>: مساحة إعلانية ظاهرة في جزء من الشاشة الرئيسية.</li>
+      <li><strong>إعلانات عند الفتح</strong>: تظهر أحيانًا عند فتح التطبيق.</li>
+      <li><strong>إعلانات بملء الشاشة (interstitial)</strong>: تظهر في بعض نقاط الانتقال بين شاشات العرض فقط، مثل الخروج من «تحليل الدورة» أو «السجل» أو «تصدير البيانات» أو «الأسئلة الشائعة». لا تظهر أبدًا أثناء تسجيل البيانات أو الكتابة في اليوميات.</li>
+      <li><strong>فيديو بمكافأة</strong>: شكل تختارين تفعيله بإرادتكِ. عند مشاهدة فيديو إعلاني كاملًا تحصلين على 12 ساعة دون أي إعلانات في التطبيق، ويمكنكِ تكرار المشاهدة لتمديد المدة.</li>
+    </ul>
+    <p>لتقديم هذه الإعلانات، تستعين Google بشبكة من الشركاء الإعلانيين من أطراف ثالثة، ويمكن الاطلاع على قائمتهم المحدّثة داخل نموذج الموافقة الموضح أدناه. قد تعالج Google وهؤلاء الشركاء معلومات تقنية مثل:</p>
+    <ul>
+      <li>المعرّف الإعلاني للجهاز (Android Advertising ID)؛</li>
+      <li>عنوان IP ونوع الجهاز ونظام التشغيل وإصدار التطبيق واللغة والبلد التقريبي؛</li>
+      <li>التفاعلات مع الإعلانات، مثل المشاهدات والنقرات.</li>
+    </ul>
+    <p>البيانات الصحية التي تُدخلينها في التطبيق — الدورات والأعراض والملاحظات والقياسات — لا تُرسل في أي حال إلى Google أو AdMob أو أي شبكة إعلانية أخرى، ولا تُستخدم لتخصيص الإعلانات. لا يحتوي أي طلب إعلاني على معلومات عن دورتكِ أو صحتكِ: محتوى يومياتكِ وأعراضكِ وتواريخكِ لا تغادر الجهاز.</p>
+    <p>عند فتح التطبيق لأول مرة، إذا كنتِ في المنطقة الاقتصادية الأوروبية أو المملكة المتحدة أو سويسرا، يُعرض عليكِ نموذج موافقة متوافق مع إطار الشفافية والموافقة (Transparency and Consent Framework) الخاص بـ IAB Europe، ويُدار عبر منصة User Messaging Platform من Google. من هذا النموذج يمكنكِ:</p>
+    <ul>
+      <li>الموافقة على الإعلانات المخصصة؛</li>
+      <li>رفض الموافقة، مع الاستمرار في رؤية إعلانات غير مخصصة؛</li>
+      <li>إدارة كل غرض وكل مزوّد إعلاني بالتفصيل.</li>
+    </ul>
+    <p>لا يُطلب أي من الأشكال الأربعة قبل تحديد موافقتكِ. وبحسب إعدادات نموذج الموافقة، قد تستند بعض الأغراض الإعلانية إلى موافقتكِ الصريحة، وأخرى إلى المصلحة المشروعة لـ Google وشركائها: يوضح النموذج دائمًا الأساس المطبّق على كل غرض ويتيح لكِ إدارة تفضيلاتكِ.</p>
+    <p>يمكنكِ تغيير اختياركِ في أي وقت من خيار <strong>إعدادات الخصوصية</strong> في قسم «الإعدادات» داخل التطبيق.</p>
+    <p>لمزيد من المعلومات: <a href="https://policies.google.com/privacy">سياسة خصوصية Google</a> و<a href="https://policies.google.com/technologies/partner-sites">كيف تستخدم Google البيانات من مواقع وتطبيقات الشركاء</a>.</p>
+
+    <h3>3.5 لا توجد إحصاءات استخدام</h3>
+    <p>لا يتضمن التطبيق أدوات تحليلات أو تتبّع للسلوك أو إبلاغ تلقائي عن الأعطال (مثل Google Analytics أو Firebase Crashlytics). لا نجمع أي إحصاءات عن استخدامكِ للتطبيق.</p>
+
+    <h3>3.6 التحقق من التحديثات</h3>
+    <p>يستخدم التطبيق خدمة In-App Updates من Google Play للتحقق مما إذا كان هناك إصدار جديد متاح، ولعرض تنبيه لكِ في هذه الحالة. يتولى هذا التحقق تطبيق متجر Google Play المثبّت على جهازكِ، وفقًا لشروط Google Play وسياسة الخصوصية الخاصة به. لا تُرسل خلال هذه العملية أي بيانات أدخلتِها في التطبيق.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">4</span>الأذونات المطلوبة</h2>
+    <table>
+      <tr><th>الإذن</th><th>سبب الحاجة إليه</th></tr>
+      <tr><td>الإشعارات</td><td>عرض تذكيرات الدورة والإباضة وأيام الخصوبة والتسجيل اليومي والمزاج والأعراض، وتذكير إذا لم تسجّلي شيئًا منذ فترة. تُنشأ الإشعارات محليًا على الجهاز.</td></tr>
+      <tr><td>المعرض / الكاميرا</td><td>فقط إذا اخترتِ تعيين صورة للملف الشخصي. تبقى الصورة على الجهاز.</td></tr>
+      <tr><td>الوصول إلى الملفات</td><td>فقط عند إنشاء نسخة احتياطية أو استعادتها، لكتابة الملف الذي تختارينه أو قراءته.</td></tr>
+      <tr><td>البصمة / قفل الشاشة</td><td>فقط لحماية الدخول إلى التطبيق بالبصمة أو الوجه أو رمز PIN. تتولى إدارة البيانات البيومترية نظام التشغيل، ولا يمكن للتطبيق الوصول إليها أبدًا.</td></tr>
+    </table>
+    <p>يمكنكِ إلغاء أي إذن في أي وقت من إعدادات نظام التشغيل.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">5</span>التصدير والنسخ الاحتياطي والمشاركة</h2>
+
+    <h3>5.1 التصدير إلى PDF أو CSV</h3>
+    <p>يتيح التطبيق تصدير بياناتكِ بصيغة PDF أو CSV ومشاركتها عبر وظائف جهازكِ، مثل البريد الإلكتروني أو تطبيقات المراسلة أو مساحتكِ السحابية الشخصية. هذه ملفات مخصصة للقراءة، مثلًا لأخذها إلى الطبيب.</p>
+
+    <h3>5.2 النسخ الاحتياطي والاستعادة</h3>
+    <p>يتيح التطبيق أيضًا إنشاء ملف نسخة احتياطية يحتوي على جميع البيانات المسجلة: الدورات والأعراض والمزاج وملاحظات اليوميات والقياسات والإعدادات، وأي بيانات سُجّلت بإصدارات سابقة من التطبيق (مثل الأدوية). يُنشأ الملف على الجهاز ويُعرض عليكِ عبر قائمة المشاركة في نظام التشغيل: أنتِ من يختار مكان حفظه، مثل ذاكرة الهاتف أو مساحتكِ السحابية الشخصية أو بإرساله إلى نفسكِ.</p>
+    <p>لا يُرسل ملف النسخة الاحتياطية إلينا، ولا يمر عبر خوادمنا، ولا نحتفظ بأي نسخة منه. تقرأ وظيفة استعادة النسخة الاحتياطية ملفًا تختارينه أنتِ وتستبدل البيانات الموجودة في التطبيق.</p>
+
+    <div class="note">
+      <strong>تنبيه.</strong> يحتوي ملف النسخة الاحتياطية على بيانات تتعلق بصحتكِ بصيغة مقروءة وغير محمي بكلمة مرور. بمجرد حفظه أو مشاركته تغادر هذه البيانات الجهاز، وتتوقف معالجتها على الخدمة التي تختارينها وعلى من يمكنه الوصول إلى تلك المساحة. احتفظي به في مكان تثقين به ولا تشاركيه مع أشخاص لا تريدين أن يقرؤوا هذه المعلومات.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">6</span>الأسس القانونية للمعالجة</h2>
+    <table>
+      <tr><th>المعالجة</th><th>الأساس القانوني</th></tr>
+      <tr><td>بيانات الدورة والأعراض والصحة واليوميات المحفوظة محليًا</td><td>موافقتكِ الصريحة، المادة 9، الفقرة 2، البند (أ) من اللائحة العامة لحماية البيانات. قبل أن تتمكني من إدخال أي بيانات عن الدورة، يعرض لكِ التطبيق شاشة مخصصة توضح أنها بيانات تتعلق بصحتكِ وأنها تبقى على الجهاز فقط؛ ويمكنكِ الاطلاع على هذه السياسة من الشاشة نفسها، ولا يمكنكِ المتابعة إلا بتأكيد صريح («فهمت، متابعة»). يُحفظ تاريخ هذا التأكيد ووقته على جهازكِ، ويبقى متاحًا لكِ دليلًا على الموافقة.</td></tr>
+      <tr><td>تشغيل الوظائف الأساسية للتطبيق</td><td>تنفيذ الخدمة التي تطلبينها، المادة 6، الفقرة 1، البند (ب) من اللائحة العامة لحماية البيانات.</td></tr>
+      <tr><td>الإعلانات المخصصة وأغراض القياس المرتبطة بها</td><td>موافقتكِ، المادة 6، الفقرة 1، البند (أ) من اللائحة العامة لحماية البيانات، التي تُجمع عبر النموذج الموضح في البند 3.4 ويمكن سحبها في أي وقت.</td></tr>
+      <tr><td>الإعلانات غير المخصصة والأمان التقني للإعلانات</td><td>بحسب إعدادات نموذج الموافقة: موافقتكِ، المادة 6، الفقرة 1، البند (أ)، أو المصلحة المشروعة في الاستدامة الاقتصادية للخدمة، المادة 6، الفقرة 1، البند (و) من اللائحة العامة لحماية البيانات. يوضح النموذج الأساس المطبّق على كل غرض.</td></tr>
+    </table>
+    <p>تقديم البيانات الصحية اختياري تمامًا: يمكنكِ استخدام التطبيق وإدخال المعلومات التي تريدينها فقط.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">7</span>الاحتفاظ بالبيانات</h2>
+    <p>تبقى البيانات التي تُدخلينها على الجهاز إلى أن تحذفيها بنفسكِ: من وظائف التطبيق، أو بمسح بيانات التطبيق من إعدادات النظام، أو بإلغاء تثبيت التطبيق.</p>
+    <p>تبقى ملفات النسخ الاحتياطي التي أنشأتِها حيث حفظتِها إلى أن تحذفيها.</p>
+    <p>تحدد Google فترات الاحتفاظ بالبيانات التي تعالجها لأغراض إعلانية في سياستها الخاصة وفي قائمة المزوّدين المتاحة من نموذج الموافقة.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">8</span>نقل البيانات إلى دول أخرى</h2>
+    <p>لا ننقل بياناتكِ إلى أي بلد، لأننا لا نستلمها.</p>
+    <p>قد تعالج Google، بصفتها مزوّد الإعلانات، البيانات التقنية المذكورة في البند 3.4 خارج المنطقة الاقتصادية الأوروبية أيضًا، ولا سيما في الولايات المتحدة، استنادًا إلى آليات النقل التي تحددها Google من وقت لآخر، مثل البنود التعاقدية القياسية للمفوضية الأوروبية و/أو إطار خصوصية البيانات بين الاتحاد الأوروبي والولايات المتحدة (EU-U.S. Data Privacy Framework). التفاصيل المحدّثة متوفرة في سياسة Google.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">9</span>حقوقكِ</h2>
+    <p>بموجب المواد 15 إلى 22 من اللائحة العامة لحماية البيانات، يحق لكِ الوصول إلى بياناتكِ وتصحيحها ومحوها وتقييد معالجتها ونقلها، والاعتراض على المعالجة، وسحب موافقتكِ في أي وقت.</p>
+    <p>ولأن البيانات الصحية موجودة على جهازكِ فقط، يمكنكِ ممارسة كثير من هذه الحقوق مباشرة وبأثر فوري:</p>
+    <ul>
+      <li>الوصول والنقل: التصدير إلى PDF أو CSV، أو إنشاء ملف نسخة احتياطية؛</li>
+      <li>التصحيح: تعديل الإدخالات أو حذفها من شاشات التطبيق؛</li>
+      <li>المحو: حذف الإدخالات، أو مسح بيانات التطبيق من إعدادات النظام، أو إلغاء التثبيت؛</li>
+      <li>سحب الموافقة الإعلانية: خيار «إعدادات الخصوصية» في قسم «الإعدادات» داخل التطبيق.</li>
+    </ul>
+    <p>لأي طلب آخر يمكنكِ الكتابة إلى <a href="mailto:trackyourself.support@gmail.com">trackyourself.support@gmail.com</a>.</p>
+    <p>ويحق لكِ أيضًا تقديم شكوى إلى سلطة رقابية. في إيطاليا هي <strong>Garante per la protezione dei dati personali</strong> (<a href="https://www.garanteprivacy.it">www.garanteprivacy.it</a>)، ويمكنكِ أيضًا التوجه إلى سلطة حماية البيانات في بلدكِ.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">10</span>القاصرون</h2>
+    <p>التطبيق غير موجّه لمن هم دون الحد الأدنى لسن الموافقة الرقمية في بلدهم: 14 عامًا في إيطاليا، وبين 13 و16 عامًا في دول الاتحاد الأوروبي الأخرى بحسب القانون الوطني. لا نجمع عن علم بيانات قاصرين دون هذا السن.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">11</span>تنبيه صحي</h2>
+    <p>Track Yourself أداة للمتابعة والتنظيم الشخصي. توقعات الدورة والإباضة وفترة الخصوبة تقديرات إحصائية تُحسب من البيانات التي تُدخلينها، وقد تختلف عن النمط الفعلي لجسمكِ، خاصة مع الدورات غير المنتظمة أو قلة الدورات المسجلة.</p>
+    <p>التطبيق ليس جهازًا طبيًا، ولا يقدّم تشخيصًا، ولا يجوز استخدامه وسيلةً لمنع الحمل أو للوقاية من الحمل أو من الأمراض المنقولة جنسيًا. المعلومات التي يقدمها التطبيق ومساعده لأغراض معلوماتية فقط. لأي مسألة تتعلق بصحتكِ، استشيري طبيبًا أو مختصًا صحيًا.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">12</span>الأمان</h2>
+    <p>يتيح التطبيق حماية الدخول برمز PIN من 4 أرقام، وبعد تعيين الرمز، بالمصادقة البيومترية للجهاز أيضًا. كما يعتمد على آليات عزل التطبيقات التي يوفرها نظام التشغيل.</p>
+    <div class="note">
+      <strong>لا يمكن استعادة رمز PIN.</strong> لا يوجد حساب ولا بريد إلكتروني مرتبط به، لذلك لا يمكن لأحد، ونحن منهم، إعادة تعيينه أو فتح التطبيق نيابة عنكِ. إذا فعّلتِ فتح القفل بالبصمة يمكنكِ الدخول بها. وإلا فالطريقة الوحيدة هي إلغاء تثبيت التطبيق وإعادة تثبيته، وهذا يحذف جميع البيانات المحفوظة. ننصحكِ بإنشاء ملف نسخة احتياطية من حين لآخر.
+    </div>
+    <p>ولأن البيانات موجودة على الجهاز، يعتمد أمانها أيضًا على حماية الجهاز نفسه: ننصحكِ بإبقاء قفل الشاشة مفعّلًا ونظام التشغيل محدّثًا.</p>
+    <p>لا يمكن لأي نظام معلوماتي أن يضمن أمانًا مطلقًا.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">13</span>التعديلات على هذه السياسة</h2>
+    <p>قد تُحدَّث هذه السياسة، مثلًا عند إضافة ميزات جديدة. تُنشر أحدث نسخة دائمًا على هذه الصفحة، مع تاريخ آخر تحديث في أعلاها. وفي حال إجراء تغييرات جوهرية تتعلق بالبيانات الصحية أو بجهات جديدة تتلقى البيانات، سيُطلب منكِ تقديم موافقة جديدة داخل التطبيق.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">14</span>التواصل</h2>
+    <p>المسؤول: <strong>Softline Apps</strong><br>
+    البريد الإلكتروني: <a href="mailto:trackyourself.support@gmail.com">trackyourself.support@gmail.com</a></p>
+  </div>
+
+</div>
+
 <footer>© Track Yourself — Softline Apps</footer>
 
 </div>
@@ -1030,10 +1249,11 @@ function setLang(l){
   document.getElementById('btn-de').classList.toggle('on', l === 'de');
   document.getElementById('btn-es').classList.toggle('on', l === 'es');
   document.getElementById('btn-fr').classList.toggle('on', l === 'fr');
+  document.getElementById('btn-ar').classList.toggle('on', l === 'ar');
   document.documentElement.lang = l;
 }
 var browserLang = navigator.language ? navigator.language.slice(0,2) : 'it';
-var supported = ['it','en','de','es','fr'];
+var supported = ['it','en','de','es','fr','ar'];
 setLang(supported.indexOf(browserLang) !== -1 ? browserLang : 'it');
 </script>
 
